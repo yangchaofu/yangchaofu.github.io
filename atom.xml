@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yangchaofu.cn/"/>
-  <updated>2018-05-10T00:58:12.162Z</updated>
+  <updated>2018-05-10T04:33:30.675Z</updated>
   <id>https://yangchaofu.cn/</id>
   
   <author>
@@ -21,16 +21,33 @@
     <link href="https://yangchaofu.cn/2018/05/09/%E9%9F%B3%E4%B9%90%E5%92%8C%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95/"/>
     <id>https://yangchaofu.cn/2018/05/09/音乐和视频测试/</id>
     <published>2018-05-09T15:09:47.000Z</published>
-    <updated>2018-05-10T00:58:12.162Z</updated>
+    <updated>2018-05-10T04:33:30.675Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=445546453&auto=1&height=66"></iframe></p><h4 id="无人与我度余生……"><a href="#无人与我度余生……" class="headerlink" title="无人与我度余生……"></a>无人与我度余生……</h4>        <div id="aplayer-oRzwllrQ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-oRzwllrQ"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "给未来的自己",              author: "杨宗纬",              url: "http://t1.aixinxi.net/o_1cd3o784g1osfsi9138p1gp0586a.mp3",              pic: "http://t1.aixinxi.net/o_1cd3oig311k0i19ig1dflpmqg3ba.jpg-w.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><h4 id="给未来的自己"><a href="#给未来的自己" class="headerlink" title="给未来的自己"></a>给未来的自己</h4><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"video":{"url":"http://hc.yinyuetai.com/uploads/videos/common/EA5C013B0C230B2FB98CD9AE6D08CEDF.flv?sc=78c58aee070a719f&br=777&vid=548425&aid=123&area=US&vst=2.mp4","pic":"https://i.loli.net/2018/05/10/5af32395de90a.png"},"danmaku":{"id":"11232345134","api":"https://api.prprpr.me/dplayer/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script><h4 id="Viva-La-Vida（生命万岁）站立的角度不一样，就能看到不一样的世界"><a href="#Viva-La-Vida（生命万岁）站立的角度不一样，就能看到不一样的世界" class="headerlink" title="Viva La Vida（生命万岁）站立的角度不一样，就能看到不一样的世界"></a>Viva La Vida（生命万岁）站立的角度不一样，就能看到不一样的世界</h4>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>        <div id="aplayer-ykojpUZD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-ykojpUZD"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "给未来的自己",              author: "杨宗纬",              url: "http://t1.aixinxi.net/o_1cd3o784g1osfsi9138p1gp0586a.mp3",              pic: "http://t1.aixinxi.net/o_1cd3oig311k0i19ig1dflpmqg3ba.jpg-w.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><h4 id="给未来的自己"><a href="#给未来的自己" class="headerlink" title="给未来的自己"></a>给未来的自己</h4><a id="more"></a><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=445546453&auto=1&height=66"></iframe></p><h4 id="无人与我度余生……"><a href="#无人与我度余生……" class="headerlink" title="无人与我度余生……"></a>无人与我度余生……</h4><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"video":{"url":"http://hc.yinyuetai.com/uploads/videos/common/EA5C013B0C230B2FB98CD9AE6D08CEDF.flv?sc=78c58aee070a719f&br=777&vid=548425&aid=123&area=US&vst=2.mp4","pic":"https://i.loli.net/2018/05/10/5af32395de90a.png"},"danmaku":{"id":"11232345134","api":"https://api.prprpr.me/dplayer/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script><h4 id="Viva-La-Vida（生命万岁）站立的角度不一样，就能看到不一样的世界"><a href="#Viva-La-Vida（生命万岁）站立的角度不一样，就能看到不一样的世界" class="headerlink" title="Viva La Vida（生命万岁）站立的角度不一样，就能看到不一样的世界"></a>Viva La Vida（生命万岁）站立的角度不一样，就能看到不一样的世界</h4>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
+      &lt;div id=&quot;aplayer-ykojpUZD&quot; class=&quot;aplayer aplayer-tag-marker&quot; style=&quot;margin-bottom: 20px;&quot;&gt;
+            &lt;pre class=&quot;aplayer-lrc-content&quot;&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+        &lt;script&gt;
+          var ap = new APlayer({
+            element: document.getElementById(&quot;aplayer-ykojpUZD&quot;),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: &quot;给未来的自己&quot;,
+              author: &quot;杨宗纬&quot;,
+              url: &quot;http://t1.aixinxi.net/o_1cd3o784g1osfsi9138p1gp0586a.mp3&quot;,
+              pic: &quot;http://t1.aixinxi.net/o_1cd3oig311k0i19ig1dflpmqg3ba.jpg-w.jpg&quot;,
+              lrc: &quot;&quot;
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        &lt;/script&gt;
+&lt;h4 id=&quot;给未来的自己&quot;&gt;&lt;a href=&quot;#给未来的自己&quot; class=&quot;headerlink&quot; title=&quot;给未来的自己&quot;&gt;&lt;/a&gt;给未来的自己&lt;/h4&gt;
     
     </summary>
     
