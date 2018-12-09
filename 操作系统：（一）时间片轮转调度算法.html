@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="C语言,操作系统," />
 
 
 
@@ -83,14 +83,18 @@
 
 
 
+<meta name="description" content="时间片轮转法是操作系统进程调度的一种算法，该算法的目的旨在实现多道程序技术，即宏观上程序并发。">
+<meta name="keywords" content="C语言,操作系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="操作系统：（一）时间片轮转调度算法">
 <meta property="og:url" content="https://yangchaofu.cn/操作系统：（一）时间片轮转调度算法.html">
 <meta property="og:site_name" content="GALAXY">
+<meta property="og:description" content="时间片轮转法是操作系统进程调度的一种算法，该算法的目的旨在实现多道程序技术，即宏观上程序并发。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-11T10:23:09.521Z">
+<meta property="og:updated_time" content="2018-11-24T15:03:54.442Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操作系统：（一）时间片轮转调度算法">
+<meta name="twitter:description" content="时间片轮转法是操作系统进程调度的一种算法，该算法的目的旨在实现多道程序技术，即宏观上程序并发。">
 
 
 
@@ -98,7 +102,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
@@ -350,6 +354,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -371,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  559
                 </span>
               
 
@@ -396,7 +422,20 @@
       
 
       
-        
+        <p>时间片轮转法是操作系统进程调度的一种算法，该算法的目的旨在实现多道程序技术，即宏观上程序并发。</p>
+<a id="more"></a>  
+<h3 id="串行、并行和并发"><a href="#串行、并行和并发" class="headerlink" title="串行、并行和并发"></a>串行、并行和并发</h3><p>首先理解这个算法要理解什么是并发、并行和串行。用一个别人通俗易懂的解释：  </p>
+<ul>
+<li>你吃饭吃到一半，电话来了，你一直到吃完了以后才去接，这就说明你不支持并发也不支持并行，你是串行执行的。</li>
+<li>你吃饭吃到一半，电话来了，你停了下来接了电话，接完后继续吃饭，这说明你支持并发。</li>
+<li>你吃饭吃到一半，电话来了，你一边打电话一边吃饭，这说明你支持并行。<br><em>并发的关键是你有处理多个任务的能力，不一定要同时。并行的关键是你有<strong>同时</strong>处理多个任务的能力。所以我认为它们最关键的点就是：是否是『同时』。</em> <a href="https://www.zhihu.com/question/33515481/answer/58849148" target="_blank" rel="noopener">该解释来源</a>  </li>
+</ul>
+<h3 id="时间片轮转简介"><a href="#时间片轮转简介" class="headerlink" title="时间片轮转简介"></a>时间片轮转简介</h3><p>时间片轮转法是一种操作系统赋予CPU软件实现的并发能力。单核CPU能在宏观上做到并发，实际在微观上是串行的。该算法的关键在于时间片的划分，时间片过短导致操作系统进行频繁的进程调度，浪费资源；时间片过长会变成串行，算法也就是失去了价值，我使用Java语言模拟该算法地实现。</p>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><ol>
+<li>进程的数据结构：  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Class Process&#123;</span><br><span class="line">    <span class="keyword">public</span> String processName;  <span class="comment">//进程名称</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> arriveTime;  <span class="comment">//进程到达时间</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> startTime;   <span class="comment">//进程开始时间</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> endTime;   <span class="comment">//进程结束时间</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> durationTime;    <span class="comment">//进程持续时间</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> processStatus;    <span class="comment">//进程状态(taking  wait  run  finished)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> runTimed;    <span class="comment">//进程已经运行的时间</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> processName[<span class="number">20</span>];<span class="comment">//进程名称</span></span><br><span class="line">    <span class="keyword">int</span> arriveTime;<span class="comment">//进程到达时间</span></span><br><span class="line">    <span class="keyword">int</span> startTime;<span class="comment">//进程开始时间</span></span><br><span class="line">    <span class="keyword">int</span> endTime;<span class="comment">//进程结束时间</span></span><br><span class="line">    <span class="keyword">int</span> runTime;<span class="comment">//进程运行时间大小</span></span><br><span class="line">    <span class="keyword">int</span> turnOverTime;<span class="comment">//周转时间</span></span><br><span class="line">    <span class="keyword">int</span> userweightTurnOverTime;<span class="comment">//带权周转时间</span></span><br><span class="line">    <span class="keyword">char</span> provessStatus[<span class="number">10</span>];<span class="comment">//进程状态</span></span><br><span class="line">    <span class="keyword">int</span> runTimeed; <span class="comment">//进程已经运行的时间</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
       
     </div>
     
@@ -410,6 +449,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C语言/" rel="tag"><i class="fa fa-tag"></i> C语言</a>
+          
+            <a href="/tags/操作系统/" rel="tag"><i class="fa fa-tag"></i> 操作系统</a>
+          
+        </div>
       
 
       
@@ -491,8 +538,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -533,7 +589,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -608,6 +664,22 @@ show_date_time();
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#串行、并行和并发"><span class="nav-number">1.</span> <span class="nav-text">串行、并行和并发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间片轮转简介"><span class="nav-number">2.</span> <span class="nav-text">时间片轮转简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据结构"><span class="nav-number">3.</span> <span class="nav-text">数据结构</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -632,7 +704,7 @@ show_date_time();
     <i class="fa fa-area-chart"></i>
   </span>
   <div class="theme-info">
-    <span class="post-count">博客全站共: 16.9k 字</span>
+    <span class="post-count">博客全站共: 17.4k 字</span>
   </div>
 
   
@@ -647,7 +719,7 @@ show_date_time();
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" rel="external nofollow" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" rel="external nofollow" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -748,6 +820,13 @@ show_date_time();
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
