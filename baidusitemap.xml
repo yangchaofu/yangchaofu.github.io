@@ -4,16 +4,38 @@
 
     
   <url>
+    <loc>https://yangchaofu.cn/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%94%9F%E6%88%90%E4%B8%8E%E8%A7%A3%E6%9E%90%EF%BC%9Azxing.html</loc>
+    <lastmod>2019-01-03T13:50:07.723Z</lastmod>
+    <data>
+        <display>
+        <title>二维码生成与解析：zxing</title>
+        <pubTime>2018-11-16T14:40:58.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>二维码 - zxing</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="https://yangchaofu.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://yangchaofu.cn/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%94%9F%E6%88%90%E4%B8%8E%E8%A7%A3%E6%9E%90%EF%BC%9AQRCode.html</loc>
-    <lastmod>2019-01-03T13:07:46.934Z</lastmod>
+    <lastmod>2019-01-03T13:46:59.579Z</lastmod>
     <data>
         <display>
         <title>二维码生成与解析：QRCode</title>
         <pubTime>2018-11-17T02:54:16.000Z</pubTime>
         
-        <tag>Java</tag>
-         
         <tag>二维码</tag>
+         
+        <tag>Java</tag>
          
         <tag>QRCode</tag>
          
@@ -107,28 +129,6 @@
            
              
               <breadCrumb title="随笔" url="https://yangchaofu.cn/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://yangchaofu.cn/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%94%9F%E6%88%90%E4%B8%8E%E8%A7%A3%E6%9E%90%EF%BC%9Azxing.html</loc>
-    <lastmod>2019-01-03T12:51:00.395Z</lastmod>
-    <data>
-        <display>
-        <title>二维码生成与解析：zxing</title>
-        <pubTime>2018-11-16T14:40:58.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>二维码 - zxing</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="https://yangchaofu.cn/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
