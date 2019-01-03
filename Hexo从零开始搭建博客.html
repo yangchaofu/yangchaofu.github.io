@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="GALAXY">
 <meta property="og:description" content="个人博客是继Email、BBS、IM之后的第四种网络信息传播方式，是一个区别于当前流行的（QQ空间，微信朋友圈，微信公众号，微博，贴吧，知乎，简书，论坛）信息分享平台，他有强烈的个人标识和非常高的个性化。说了这么多，我想说的是我搭建了一个博客，我有话要说，:muscle:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-26T01:50:03.648Z">
+<meta property="og:updated_time" content="2019-01-03T13:02:18.013Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始搭建博客|Hexo+Github+NexT">
 <meta name="twitter:description" content="个人博客是继Email、BBS、IM之后的第四种网络信息传播方式，是一个区别于当前流行的（QQ空间，微信朋友圈，微信公众号，微博，贴吧，知乎，简书，论坛）信息分享平台，他有强烈的个人标识和非常高的个性化。说了这么多，我想说的是我搭建了一个博客，我有话要说，:muscle:">
@@ -104,7 +104,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -387,25 +387,6 @@
           
 
           
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  4,923
-                </span>
-              
-
-              
-
-              
-            </div>
-          
 
           
 
@@ -426,7 +407,9 @@
 <a id="more"></a>
 <p>博客诞生同其他几个一样，在互联网兴起之后，人们对信息分享和流通的需求逐渐加大，而这个需求在当时还不能由上述所说的各种产品满足，所以博客成为了当时的一种信息共享方式；在当时写博客的人应该多是互联网从事者，因为当时互联网使用率很低，也没有WordPress，Joomla，Hexo这样简单好用（相对而言）的建站工具，建站难度很高，个人建站的话，必须精通网络知识而且能够进行Web开发。即使博客能顺利建立，以后面临的另一个问题就是内容流通性差，互联网太广太大了，光靠搜索引擎不能使更多的信息流通起来，所以有很多的商业公司瞄准了这个市场，于是就诞生了以上的那些产品，它们各有特色，互为补充，几乎每一个国内的互联网使用者都有用过其中一二。</p>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>作为一个CS专业的大学生，书写博客是我们自身的需要，它不像在纸上书写，计算机显示技术能将我们想要表达的很多内容，清晰，明确的表现出来，举几个简单的例子：代码高亮，动态图演示等，都是书本不具有的，所以各种技术论坛，如CSDN、博客园、开源中国、Stack Overflow就应运而生，从一个方面来说，个人博客存在的意义已经不大了，但从另一个方面来说，个人博客与GitHub是一张好的名片。</p>
-<p><strong><em>Talk is cheap. Show me the code.</em></strong><br>—<em>Linus Torvalds</em></p>
+<blockquote>
+<p>Talk is cheap. Show me the code.<br>—<em>Linus Torvalds</em></p>
+</blockquote>
 <h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>博客建成就是你能看到的这个样子，功能基本齐全，评论功能由于体验十分糟糕所以弃用了 ，其他的一些功能觉得不必要就没有弄，如果你有什么问题和反馈可以从侧边栏使用邮件或者通过Github给我留言。<br>那些深度定制的博客十分惊艳，做之前可以先看看可以达到什么样的高度。</p>
 <ul>
 <li><a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">Hexo博客深度优化样例</a></li>
@@ -1145,35 +1128,7 @@
           
           
 
-          <div id="days"></div>
-</script>
-<script language="javascript">
-function show_date_time() {
-  window.setTimeout("show_date_time()", 1000);
-  BirthDay = new Date("04/13/2018 00:00:00");
-  today = new Date();
-  timeold = (today.getTime() - BirthDay.getTime());
-  sectimeold = timeold / 1000
-  secondsold = Math.floor(sectimeold);
-  msPerDay = 24 * 60 * 60 * 1000
-  e_daysold = timeold / msPerDay
-  daysold = Math.floor(e_daysold);
-  e_hrsold = (e_daysold - daysold) * 24;
-  hrsold = setzero(Math.floor(e_hrsold));
-  e_minsold = (e_hrsold - hrsold) * 60;
-  minsold = setzero(Math.floor((e_hrsold - hrsold) * 60));
-  seconds = setzero(Math.floor((e_minsold - minsold) * 60));
-  document.getElementById('days').innerHTML = "已运行" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
-}
-function setzero(i) {
-  if (i < 10) {
-    i = "0" + i
-  };
-  return i;
-}
-show_date_time();
-</script>
-
+          
 
         </div>
       </section>
@@ -1213,14 +1168,6 @@ show_date_time();
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">沼泽星空</span>
-
-  <span class="post-meta-divider">|</span>
-  <span class="post-meta-item-icon">
-    <i class="fa fa-area-chart"></i>
-  </span>
-  <div class="theme-info">
-    <span class="post-count">博客全站共: 17.4k 字</span>
-  </div>
 
   
 </div>

@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="C语言,操作系统," />
+  <meta name="keywords" content="Java,二维码 - zxing," />
 
 
 
@@ -83,18 +83,20 @@
 
 
 
-<meta name="description" content="时间片轮转法是操作系统进程调度的一种算法，该算法的目的旨在实现多道程序技术，即宏观上程序并发。">
-<meta name="keywords" content="C语言,操作系统">
+<meta name="description" content="本文介绍使用开源库zxing生成和解析二维码。">
+<meta name="keywords" content="Java,二维码 - zxing">
 <meta property="og:type" content="article">
-<meta property="og:title" content="操作系统：（一）时间片轮转调度算法">
-<meta property="og:url" content="https://yangchaofu.cn/操作系统：（一）时间片轮转调度算法.html">
+<meta property="og:title" content="二维码生成与解析：zxing">
+<meta property="og:url" content="https://yangchaofu.cn/二维码生成与解析：zxing.html">
 <meta property="og:site_name" content="GALAXY">
-<meta property="og:description" content="时间片轮转法是操作系统进程调度的一种算法，该算法的目的旨在实现多道程序技术，即宏观上程序并发。">
+<meta property="og:description" content="本文介绍使用开源库zxing生成和解析二维码。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-24T15:03:54.442Z">
+<meta property="og:image" content="http://imglf6.nosdn0.126.net/img/MVlXRlBpYVg1NWtaM29KamxXUFROd2dEdC9jQWxmOVJock5ST29IQ3pXWTRaZFhjb3d1bk9nPT0.png?imageView&thumbnail=500x0&quality=96&stripmeta=0">
+<meta property="og:updated_time" content="2019-01-03T12:51:00.395Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="操作系统：（一）时间片轮转调度算法">
-<meta name="twitter:description" content="时间片轮转法是操作系统进程调度的一种算法，该算法的目的旨在实现多道程序技术，即宏观上程序并发。">
+<meta name="twitter:title" content="二维码生成与解析：zxing">
+<meta name="twitter:description" content="本文介绍使用开源库zxing生成和解析二维码。">
+<meta name="twitter:image" content="http://imglf6.nosdn0.126.net/img/MVlXRlBpYVg1NWtaM29KamxXUFROd2dEdC9jQWxmOVJock5ST29IQ3pXWTRaZFhjb3d1bk9nPT0.png?imageView&thumbnail=500x0&quality=96&stripmeta=0">
 
 
 
@@ -104,7 +106,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -124,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://yangchaofu.cn/操作系统：（一）时间片轮转调度算法.html"/>
+  <link rel="canonical" href="https://yangchaofu.cn/二维码生成与解析：zxing.html"/>
 
 
 
 
 
-  <title>操作系统：（一）时间片轮转调度算法 | GALAXY</title>
+  <title>二维码生成与解析：zxing | GALAXY</title>
   
 
 
@@ -314,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yangchaofu.cn/操作系统：（一）时间片轮转调度算法.html">
+    <link itemprop="mainEntityOfPage" href="https://yangchaofu.cn/二维码生成与解析：zxing.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="沼泽星空">
@@ -331,7 +333,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">操作系统：（一）时间片轮转调度算法</h2>
+          <h2 class="post-title" itemprop="name headline">二维码生成与解析：zxing</h2>
         
 
         <div class="post-meta">
@@ -343,8 +345,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-11T18:23:09+08:00">
-                2018-07-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-16T22:40:58+08:00">
+                2018-11-16
               </time>
             
 
@@ -387,25 +389,6 @@
           
 
           
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  559
-                </span>
-              
-
-              
-
-              
-            </div>
-          
 
           
 
@@ -422,19 +405,150 @@
       
 
       
-        <p>时间片轮转法是操作系统进程调度的一种算法，该算法的目的旨在实现多道程序技术，即宏观上程序并发。</p>
-<a id="more"></a>  
-<h3 id="串行、并行和并发"><a href="#串行、并行和并发" class="headerlink" title="串行、并行和并发"></a>串行、并行和并发</h3><p>首先理解这个算法要理解什么是并发、并行和串行。用一个别人通俗易懂的解释：  </p>
+        <p>本文介绍使用开源库<a href="https://github.com/zxing/zxing" target="_blank" rel="noopener">zxing</a>生成和解析二维码。  </p>
+<a id="more"></a>
+<p>使用zxing首先需要使用源码中的core和javase两个文件制作JAR文件，为了不偏离主题，将这部分放在最后一节讲解，本文直接提供制作好的JAR文件。<br>百度网盘：链接：<a href="https://pan.baidu.com/s/1vQZRPbRKzaQg3-XqsRc-Jw" target="_blank" rel="noopener">https://pan.baidu.com/s/1vQZRPbRKzaQg3-XqsRc-Jw</a><br>提取码：y8cq </p>
+<h3 id="使用zxing创建二维码"><a href="#使用zxing创建二维码" class="headerlink" title="使用zxing创建二维码"></a>使用zxing创建二维码</h3><p>将网盘中zxing文件夹中的zxing3.x.jar文件导入到项目中。<br>以下的代码将在 C://Users/yangc/Desktop文件夹中创建一张二维码（pic.png）,二维码所携带的内容为：<a href="https://yangchaofu.cn。创建过程总共分为两个大步骤，第一个大步骤是创建前的准备工作，包含两个小步骤；第二个大步骤是创建步骤" target="_blank" rel="noopener">https://yangchaofu.cn。创建过程总共分为两个大步骤，第一个大步骤是创建前的准备工作，包含两个小步骤；第二个大步骤是创建步骤</a> ，包含三个小步骤，整体可以用以下列表结构表示：  </p>
 <ul>
-<li>你吃饭吃到一半，电话来了，你一直到吃完了以后才去接，这就说明你不支持并发也不支持并行，你是串行执行的。</li>
-<li>你吃饭吃到一半，电话来了，你停了下来接了电话，接完后继续吃饭，这说明你支持并发。</li>
-<li>你吃饭吃到一半，电话来了，你一边打电话一边吃饭，这说明你支持并行。<br><em>并发的关键是你有处理多个任务的能力，不一定要同时。并行的关键是你有<strong>同时</strong>处理多个任务的能力。所以我认为它们最关键的点就是：是否是『同时』。</em> <a href="https://www.zhihu.com/question/33515481/answer/58849148" target="_blank" rel="noopener">该解释来源</a>  </li>
+<li>制作前准备工作<ul>
+<li>定义图片信息和二维码内容</li>
+<li>定义二维码的属性信息，包括纠错等级，编码格式，二维码边距</li>
 </ul>
-<h3 id="时间片轮转简介"><a href="#时间片轮转简介" class="headerlink" title="时间片轮转简介"></a>时间片轮转简介</h3><p>时间片轮转法是一种操作系统赋予CPU软件实现的并发能力。单核CPU能在宏观上做到并发，实际在微观上是串行的。该算法的关键在于时间片的划分，时间片过短导致操作系统进行频繁的进程调度，浪费资源；时间片过长会变成串行，算法也就是失去了价值，我使用Java语言模拟该算法地实现。</p>
-<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><ol>
-<li>进程的数据结构：  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Class Process&#123;</span><br><span class="line">    <span class="keyword">public</span> String processName;  <span class="comment">//进程名称</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> arriveTime;  <span class="comment">//进程到达时间</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> startTime;   <span class="comment">//进程开始时间</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> endTime;   <span class="comment">//进程结束时间</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> durationTime;    <span class="comment">//进程持续时间</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> processStatus;    <span class="comment">//进程状态(taking  wait  run  finished)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> runTimed;    <span class="comment">//进程已经运行的时间</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> processName[<span class="number">20</span>];<span class="comment">//进程名称</span></span><br><span class="line">    <span class="keyword">int</span> arriveTime;<span class="comment">//进程到达时间</span></span><br><span class="line">    <span class="keyword">int</span> startTime;<span class="comment">//进程开始时间</span></span><br><span class="line">    <span class="keyword">int</span> endTime;<span class="comment">//进程结束时间</span></span><br><span class="line">    <span class="keyword">int</span> runTime;<span class="comment">//进程运行时间大小</span></span><br><span class="line">    <span class="keyword">int</span> turnOverTime;<span class="comment">//周转时间</span></span><br><span class="line">    <span class="keyword">int</span> userweightTurnOverTime;<span class="comment">//带权周转时间</span></span><br><span class="line">    <span class="keyword">char</span> provessStatus[<span class="number">10</span>];<span class="comment">//进程状态</span></span><br><span class="line">    <span class="keyword">int</span> runTimeed; <span class="comment">//进程已经运行的时间</span></span><br></pre></td></tr></table></figure>
 </li>
+<li>制作过程<ul>
+<li>使用MultiFormatRead的encode方法生成一个BitMatrix对象</li>
+<li>指定输出路径</li>
+<li>使用MatrixToImageWriter的writeToPath方法将BitMatrix对象写入文件</li>
+</ul>
+</li>
+</ul>
+<p>以下代码是对上述描述的实现：</p>
+<pre><code class="Java"><span class="keyword">import</span> java.io.File;
+<span class="keyword">import</span> java.nio.file.Path;
+<span class="keyword">import</span> java.util.HashMap;
+
+<span class="keyword">import</span> com.google.zxing.BarcodeFormat;
+<span class="keyword">import</span> com.google.zxing.EncodeHintType;
+<span class="keyword">import</span> com.google.zxing.MultiFormatWriter;
+<span class="keyword">import</span> com.google.zxing.client.j2se.MatrixToImageWriter;
+<span class="keyword">import</span> com.google.zxing.common.BitMatrix;
+<span class="keyword">import</span> com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+
+<span class="comment">/**</span>
+<span class="comment"> * Java进行二维码制作-zxing</span>
+<span class="comment"> * <span class="doctag">@author</span> yangchaofu</span>
+<span class="comment"> * <span class="doctag">@since</span> JDK 1.8.192</span>
+<span class="comment"> */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreateQRCode</span> </span>{
+
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{
+        <span class="comment">//制作二维码的准备工作</span>
+        <span class="comment">//1.定义所要生成的二维码图片的长,宽,图片格式和所携带的信息</span>
+        <span class="keyword">int</span> picWidth = <span class="number">300</span>;
+        <span class="keyword">int</span> picHeight = <span class="number">300</span>;
+        String picFormat = <span class="string">"png"</span>;
+        String picContents = <span class="string">"https://yangchaofu.cn"</span>;
+
+        <span class="comment">//2.定义二维码的基本属性配置,使用散列表存储,最基本的设置包括二维码的编码格式,纠错等级和图片的边距</span>
+        HashMap hints = <span class="keyword">new</span> HashMap();    
+        hints.put(EncodeHintType.CHARACTER_SET, <span class="string">"utf-8"</span>);    <span class="comment">//设置编码格式,utf-8可设置中文</span>
+        hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.M);   <span class="comment">//设置纠错等级</span>
+        hints.put(EncodeHintType.MARGIN, <span class="number">1</span>);   <span class="comment">//设置生成二维码边距</span>
+
+
+        <span class="comment">//生成二维码的步骤</span>
+        <span class="keyword">try</span> {                        
+            <span class="comment">//1.定义一个为BitMatrix 对象,使用MultiFormatWriter 对象的encode方法设置二维码的内容,编码格式BarcodeFormat,宽,高,设置信息hints</span>
+            BitMatrix bitMatrix = <span class="keyword">new</span> MultiFormatWriter().encode(picContents, BarcodeFormat.QR_CODE, picWidth, picHeight,hints);
+            <span class="comment">//2.定义一个Path对象用于确定文件的输出位置</span>
+            Path file = <span class="keyword">new</span> File(<span class="string">"C:/Users/yangc/Desktop/pic.png"</span>).toPath();
+            <span class="comment">//3.使用MatrixToImageWriter 对象的writeToPath方法,将二维码图片输出到指定的位置,设置格式为我们准备阶段的格式</span>
+            MatrixToImageWriter.writeToPath(bitMatrix, picFormat, file);    
+            System.out.println(<span class="string">"生成二维码成功!"</span>);
+        } <span class="keyword">catch</span> (Exception e) {
+            e.printStackTrace();
+        }        
+    }
+
+}
+</code></pre>
+<p>代码执行结果：  </p>
+<p><img src="http://imglf6.nosdn0.126.net/img/MVlXRlBpYVg1NWtaM29KamxXUFROd2dEdC9jQWxmOVJock5ST29IQ3pXWTRaZFhjb3d1bk9nPT0.png?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0" alt="点击前往查看">  </p>
+<h3 id="使用zxing解析二维码"><a href="#使用zxing解析二维码" class="headerlink" title="使用zxing解析二维码"></a>使用zxing解析二维码</h3><p>解析二维码包括三个大步骤，用以下结构描述</p>
+<ul>
+<li>解析前准备<ul>
+<li>准备一个文件对象，指向需要解析的二维码图片</li>
+<li>使用ImageIO读取该图片对象为缓冲区图片BufferedImage</li>
+<li>将BufferedImage转换为一个二进制位图对象</li>
+<li>定义一个散列表存取二维码的编码格式</li>
+</ul>
+</li>
+<li>解析过程步骤<ul>
+<li>定义一个MultiFormatReader 对象,用于解码</li>
+<li>定义一个Result 对象用来获取解析的结果,这里的参数使用到前面准备的两个重要的数据,被转换为BinaryBitmap的图片对象,和定义解码配置的散列表hints</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>解析结果的展示（可以直接toString得到解析结果，也可是使用getText获取解析文本，使用getBarcodeFromat获取二维码格式）</li>
+</ul>
+<p>以下是上述过程的代码表述：</p>
+<pre><code class="Java"><span class="keyword">import</span> java.awt.image.BufferedImage;
+<span class="keyword">import</span> java.io.File;
+<span class="keyword">import</span> java.util.HashMap;
+
+<span class="keyword">import</span> javax.imageio.ImageIO;
+
+<span class="keyword">import</span> com.google.zxing.BinaryBitmap;
+<span class="keyword">import</span> com.google.zxing.EncodeHintType;
+<span class="keyword">import</span> com.google.zxing.MultiFormatReader;
+<span class="keyword">import</span> com.google.zxing.Result;
+<span class="keyword">import</span> com.google.zxing.client.j2se.BufferedImageLuminanceSource;
+<span class="keyword">import</span> com.google.zxing.common.HybridBinarizer;
+
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DeQRCode</span> </span>{
+
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{
+        <span class="keyword">try</span> {
+            <span class="comment">//解析前准备步骤            </span>
+            <span class="comment">//1.定义一个File 对象,指向我们要解码的二维码位置</span>
+            File file = <span class="keyword">new</span> File(<span class="string">"C:/Users/yangc/Desktop/qr.png"</span>);
+            <span class="comment">//2.定义一个BufferedImage 对象,并使用ImageIO类的read方法读取我们的File对象(一张图片)</span>
+            BufferedImage image = ImageIO.read(file);
+            <span class="comment">//3.定义一个BinaryBitmap 对象,使用多重嵌套 实例化将我们的image转换成一个BinaryBitmap对象,多重嵌套声明包括HybridBinarizer-&gt;(参数)BufferedImageLuminanceSource-&gt;(参数)BufferedImage[image]</span>
+            BinaryBitmap binaryBitmap = <span class="keyword">new</span> BinaryBitmap(<span class="keyword">new</span> HybridBinarizer(<span class="keyword">new</span> BufferedImageLuminanceSource(image)));
+            <span class="comment">//4.定义一个散列表,指定编码的一对键值</span>
+            HashMap hints = <span class="keyword">new</span> HashMap();
+            hints.put(EncodeHintType.CHARACTER_SET, <span class="string">"utf-8"</span>); <span class="comment">// 设置编码格式,utf-8可设置中文</span>
+
+            <span class="comment">//解析过程步骤</span>
+            <span class="comment">//1.定义一个MultiFormatReader 对象,用于解码</span>
+            MultiFormatReader formatRead = <span class="keyword">new</span> MultiFormatReader();
+            <span class="comment">//2.定义一个Result 对象用来获取解析的结果,这里的参数使用到前面准备的两个重要的数据,被转换为BinaryBitmap的图片对象,和定义解码配置的散列表hints</span>
+            Result result = formatRead.decode(binaryBitmap, hints);
+
+            <span class="comment">//解析结果展示</span>
+            <span class="comment">//rusult的toString可以展示解析结果</span>
+            System.out.println(<span class="string">"解析结果:"</span>+result.toString());
+            <span class="comment">//result文本信息可以展示二维码所携带的文本内容</span>
+            System.out.println(<span class="string">"二维码文本内容:"</span>+result.getText());
+            <span class="comment">//解码的格式可以获取二维码的编码标准和格式</span>
+            System.out.println(<span class="string">"二维码格式:"</span>+result.getBarcodeFormat());        
+        } <span class="keyword">catch</span> (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+}
+</code></pre>
+<p>以上代码的解析结果：<br>解析结果：<a href="https://yangchaofu.cn">https://yangchaofu.cn</a><br>二维码文本内容：<a href="https://yangchaofu.cn">https://yangchaofu.cn</a><br>二维码格式：QR_CODE  </p>
+<h3 id="使用zxing源码制作JAR"><a href="#使用zxing源码制作JAR" class="headerlink" title="使用zxing源码制作JAR"></a>使用zxing源码制作JAR</h3><p>github上有很多非常优秀的开源项目，这次使用的zxing就是其中之一，如何复用这些代码呢，对于Java来说，jar文件是不陌生的。我在这次实践中第一次体会到了使用源码制作jar文件的过程，记录在此处。  </p>
+<ol>
+<li>新建一个Jave项目；</li>
+<li>将下载的zxing文件夹中的core和javase两个文件中下的com文件复制到项目的src中，复制中会有文件存在的提示，选择<strong>是</strong>就可以；</li>
+<li>由于项目不是完整的项目，项目中会有很多的错误提示，这个不用管，因为我们使用IDE的时候，IDE会帮助我们管理文件的，所以直接选择导出JAR文件，之后我们就可以得到一个最新的zxing的可复用构件。</li>
 </ol>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>以上代码实现了使用zxing创建和解析二维码，经测试所生成的二维码识别率和准确性都是满足要求的，解析代码的识别率也很高。zxing是一个很好的解决方案。<br>感谢<a href="https://www.imooc.com/video/10316/0" target="_blank" rel="noopener">慕课网</a>Fcming老师的讲解和慕课网这个平台，十分感谢！</p>
 
       
     </div>
@@ -452,9 +566,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/C语言/" rel="tag"><i class="fa fa-tag"></i> C语言</a>
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
-            <a href="/tags/操作系统/" rel="tag"><i class="fa fa-tag"></i> 操作系统</a>
+            <a href="/tags/二维码-zxing/" rel="tag"><i class="fa fa-tag"></i> 二维码 - zxing</a>
           
         </div>
       
@@ -467,8 +581,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Git学习总结.html" rel="next" title="Git学习总结">
-                <i class="fa fa-chevron-left"></i> Git学习总结
+              <a href="/操作系统：时间片轮转调度算法.html" rel="next" title="操作系统：时间片轮转调度算法">
+                <i class="fa fa-chevron-left"></i> 操作系统：时间片轮转调度算法
               </a>
             
           </div>
@@ -477,8 +591,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/二维码生成与解析（一）-zxing.html" rel="prev" title="二维码生成与解析（一）-zxing">
-                二维码生成与解析（一）-zxing <i class="fa fa-chevron-right"></i>
+              <a href="/二维码生成与解析：QRCode.html" rel="prev" title="二维码生成与解析：QRCode">
+                二维码生成与解析：QRCode <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -630,35 +744,7 @@
           
           
 
-          <div id="days"></div>
-</script>
-<script language="javascript">
-function show_date_time() {
-  window.setTimeout("show_date_time()", 1000);
-  BirthDay = new Date("04/13/2018 00:00:00");
-  today = new Date();
-  timeold = (today.getTime() - BirthDay.getTime());
-  sectimeold = timeold / 1000
-  secondsold = Math.floor(sectimeold);
-  msPerDay = 24 * 60 * 60 * 1000
-  e_daysold = timeold / msPerDay
-  daysold = Math.floor(e_daysold);
-  e_hrsold = (e_daysold - daysold) * 24;
-  hrsold = setzero(Math.floor(e_hrsold));
-  e_minsold = (e_hrsold - hrsold) * 60;
-  minsold = setzero(Math.floor((e_hrsold - hrsold) * 60));
-  seconds = setzero(Math.floor((e_minsold - minsold) * 60));
-  document.getElementById('days').innerHTML = "已运行" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
-}
-function setzero(i) {
-  if (i < 10) {
-    i = "0" + i
-  };
-  return i;
-}
-show_date_time();
-</script>
-
+          
 
         </div>
       </section>
@@ -673,7 +759,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#串行、并行和并发"><span class="nav-number">1.</span> <span class="nav-text">串行、并行和并发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间片轮转简介"><span class="nav-number">2.</span> <span class="nav-text">时间片轮转简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据结构"><span class="nav-number">3.</span> <span class="nav-text">数据结构</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用zxing创建二维码"><span class="nav-number">1.</span> <span class="nav-text">使用zxing创建二维码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用zxing解析二维码"><span class="nav-number">2.</span> <span class="nav-text">使用zxing解析二维码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用zxing源码制作JAR"><span class="nav-number">3.</span> <span class="nav-text">使用zxing源码制作JAR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">4.</span> <span class="nav-text">小结</span></a></li></ol></div>
             
 
           </div>
@@ -698,14 +784,6 @@ show_date_time();
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">沼泽星空</span>
-
-  <span class="post-meta-divider">|</span>
-  <span class="post-meta-item-icon">
-    <i class="fa fa-area-chart"></i>
-  </span>
-  <div class="theme-info">
-    <span class="post-count">博客全站共: 17.4k 字</span>
-  </div>
 
   
 </div>

@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="排序算法,C语言," />
+  <meta name="keywords" content="JavaScript,Web应用,JSP页面,二维码,jQRuery," />
 
 
 
@@ -83,18 +83,21 @@
 
 
 
-<meta name="description" content="快速排序法是排序算法中综合性能最好的一种，Java语言和C++语言都自带了快速排序算法的库函数，足以见得其效率。">
-<meta name="keywords" content="排序算法,C语言">
+<meta name="description" content="前面两篇博文讲述了使用Java在本地生成和解析二维码，其生成的二维码可以用到Web应用中，但是在Web应用中有一种更简单的生成方法就是使用jQuery-qrcode来生成二维码，本片博文就介绍使用这种方法来生成二维码。">
+<meta name="keywords" content="JavaScript,Web应用,JSP页面,二维码,jQRuery">
 <meta property="og:type" content="article">
-<meta property="og:title" content="算法与数据结构：（一）快速排序法">
-<meta property="og:url" content="https://yangchaofu.cn/算法与数据结构：（一）快速排序法.html">
+<meta property="og:title" content="二维码生成与解析：jQuery-qrcode">
+<meta property="og:url" content="https://yangchaofu.cn/二维码生成与解析：jQuery-qrcode.html">
 <meta property="og:site_name" content="GALAXY">
-<meta property="og:description" content="快速排序法是排序算法中综合性能最好的一种，Java语言和C++语言都自带了快速排序算法的库函数，足以见得其效率。">
+<meta property="og:description" content="前面两篇博文讲述了使用Java在本地生成和解析二维码，其生成的二维码可以用到Web应用中，但是在Web应用中有一种更简单的生成方法就是使用jQuery-qrcode来生成二维码，本片博文就介绍使用这种方法来生成二维码。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-26T01:43:48.458Z">
+<meta property="og:image" content="http://t1.aixinxi.net/o_1csg1ce6k1hooe2g1tqs17j21av0a.jpg-j.jpg">
+<meta property="og:image" content="http://t1.aixinxi.net/o_1csg1vaq21d5m1c7t1r2721lr8va.jpg-j.jpg">
+<meta property="og:updated_time" content="2019-01-03T12:45:03.834Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="算法与数据结构：（一）快速排序法">
-<meta name="twitter:description" content="快速排序法是排序算法中综合性能最好的一种，Java语言和C++语言都自带了快速排序算法的库函数，足以见得其效率。">
+<meta name="twitter:title" content="二维码生成与解析：jQuery-qrcode">
+<meta name="twitter:description" content="前面两篇博文讲述了使用Java在本地生成和解析二维码，其生成的二维码可以用到Web应用中，但是在Web应用中有一种更简单的生成方法就是使用jQuery-qrcode来生成二维码，本片博文就介绍使用这种方法来生成二维码。">
+<meta name="twitter:image" content="http://t1.aixinxi.net/o_1csg1ce6k1hooe2g1tqs17j21av0a.jpg-j.jpg">
 
 
 
@@ -104,7 +107,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -124,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://yangchaofu.cn/算法与数据结构：（一）快速排序法.html"/>
+  <link rel="canonical" href="https://yangchaofu.cn/二维码生成与解析：jQuery-qrcode.html"/>
 
 
 
 
 
-  <title>算法与数据结构：（一）快速排序法 | GALAXY</title>
+  <title>二维码生成与解析：jQuery-qrcode | GALAXY</title>
   
 
 
@@ -314,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yangchaofu.cn/算法与数据结构：（一）快速排序法.html">
+    <link itemprop="mainEntityOfPage" href="https://yangchaofu.cn/二维码生成与解析：jQuery-qrcode.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="沼泽星空">
@@ -331,7 +334,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">算法与数据结构：（一）快速排序法</h2>
+          <h2 class="post-title" itemprop="name headline">二维码生成与解析：jQuery-qrcode</h2>
         
 
         <div class="post-meta">
@@ -343,8 +346,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-20T22:53:25+08:00">
-                2018-06-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-17T12:54:16+08:00">
+                2018-11-17
               </time>
             
 
@@ -387,25 +390,6 @@
           
 
           
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,216
-                </span>
-              
-
-              
-
-              
-            </div>
-          
 
           
 
@@ -422,21 +406,19 @@
       
 
       
-        <blockquote>
-<p>快速排序法是排序算法中综合性能最好的一种，Java语言和C++语言都自带了快速排序算法的库函数，足以见得其效率。</p>
-</blockquote>
+        <p>前面两篇博文讲述了使用Java在本地生成和解析二维码，其生成的二维码可以用到Web应用中，但是在Web应用中有一种更简单的生成方法就是使用jQuery-qrcode来生成二维码，本片博文就介绍使用这种方法来生成二维码。</p>
 <a id="more"></a>
-<p>本次算法的实现思路来自于<a href="http://blog.51cto。com/ahalei/1365285" target="_blank" rel="noopener">博客</a>，网上的快速排序实现方式基本有两种形式，其中之一就是本文参考的这一种，还有一种是百度百科里面的哪一种，具体那种更优我觉得差异不大，其核心思路都是一样的。</p>
-<p>本文使用的快速排序算法的思路：<br>从待排序数组中找一个数作为标杆(对于这个数怎么选择众说纷纭,我为了让算法简单选得是每次待排序数组的第一个元素)，每一趟快速排序将比标杆大的数放在它的右边，比它小的数放在标杆的左边，实现一轮快速排序。<br>然后通过递归调用，将标杆左边的数组又作为一个参数,直到需要排序的数组只有一个数为止。</p>
-<p>实例：有待排序数组array，其长度为arr_len，其中的数据元素有</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">13,22,58,3,1,2，1</span><br></pre></td></tr></table></figure>
-<p>共计有七个个元素，我们以第一个元素13为标杆，进行第一轮快速排序，得到如下结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 1 2 3 13 58 22</span><br></pre></td></tr></table></figure>
-<p>可以看到，我们将比13大的元素放在了该元素的右边，比13小的元素放在了该元素的左边，但是数组还不是有序的。但程序已经基本有序，我们以13为分割，对13左边和右边的数组再次实现上述过程。</p>
-<p>13左边已经有序：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1，1，2，3</span><br></pre></td></tr></table></figure></p>
-<p>13右边：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">待排序数组：58，22</span><br><span class="line">排序完成：22，58</span><br></pre></td></tr></table></figure></p>
-<p>由于我们传递的是数组的地址（指针方式）和需要排序的数组的下标，比如13右边的数组传递的就是数组<code>array，start：6，finish：7</code></p>
-<p>程序的大概思路如上所述，下面给出代码实现，本次采用C语言实现：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    本程序实现对一组整形数的快速排序实现</span></span><br><span class="line"><span class="comment">    2018年6月20日 16:38:43</span></span><br><span class="line"><span class="comment">    yangchaofu</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="comment">/*两种数组传递的函数原型*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[],<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span>;</span><br><span class="line"><span class="comment">// void quicksort(int *array,int array_length);</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">array</span>[]=&#123;<span class="number">13</span>,<span class="number">22</span>,<span class="number">58</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> arr_len = <span class="keyword">sizeof</span> <span class="built_in">array</span> / <span class="keyword">sizeof</span> <span class="built_in">array</span>[<span class="number">0</span>];</span><br><span class="line">    <span class="comment">/*输出数组*/</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Array's length: %d\n"</span>,arr_len);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr_len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,<span class="built_in">array</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">putchar</span>(<span class="string">'\n'</span>);</span><br><span class="line">    quicksort(<span class="built_in">array</span>,<span class="number">0</span>,arr_len<span class="number">-1</span>);</span><br><span class="line">    <span class="comment">/*排序后的输出结果*/</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr_len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,<span class="built_in">array</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">putchar</span>(<span class="string">'\n'</span>);</span><br><span class="line">    system(<span class="string">"pause"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">quicksort函数对给定的数组进行快速排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[],<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/*递归结束条件,很重要的一个点*/</span></span><br><span class="line">    <span class="keyword">if</span>(left &gt;= right)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> l = left, r = right;</span><br><span class="line">    <span class="comment">/*每次排序一需要排序的数组的第一个数作为标杆,将比它大的数放在它的右边,比它小的数放在它的左边(倒序与之相反)*/</span></span><br><span class="line">    <span class="keyword">int</span> temp = <span class="built_in">array</span>[left];</span><br><span class="line">    <span class="keyword">while</span>(l != r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/*从右往左找一个比标杆temp小的数,l &lt; r 避免出现l比r大程序还在循环的异常,程序在l==r时需要跳出循环*/</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">array</span>[r] &gt;= temp &amp;&amp; l &lt; r)</span><br><span class="line">            r--;</span><br><span class="line">        <span class="comment">/*从左往右找一个比标杆temp大的数*/</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">array</span>[l] &lt;= temp &amp;&amp; l &lt; r)</span><br><span class="line">            l++;</span><br><span class="line">        <span class="comment">/*寻找完毕,执行至此,找个一个比标杆小的值array[r]和一个比标杆大的值array[l]*/</span></span><br><span class="line">        <span class="keyword">if</span>(l &lt; r)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">/*如果目前找到的比标杆小的值array[r]在比标杆大的值array[l]的右边,即:两数下标 l &lt; r ,则交换两个数*/</span></span><br><span class="line">            <span class="keyword">int</span> t;</span><br><span class="line">            t = <span class="built_in">array</span>[l];</span><br><span class="line">            <span class="built_in">array</span>[l] = <span class="built_in">array</span>[r];</span><br><span class="line">            <span class="built_in">array</span>[r] = t;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*上面的循环实现快速排序中的比标杆大的数和比标杆小的数的交换,快速排序的交换逻辑可以有多种实现方式</span></span><br><span class="line"><span class="comment">      除以上实现方式外,还有标杆在比较中,随着程序的执行进行位置的更换.</span></span><br><span class="line"><span class="comment">      本程序实现其中一种逻辑,到目前为止,标杆依旧在数组的最左边,需要将其和l=r这个位置的数进行交换.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="keyword">int</span> temporary =  <span class="built_in">array</span>[r];</span><br><span class="line">   <span class="built_in">array</span>[r] = temp;</span><br><span class="line">   <span class="built_in">array</span>[left] = temporary;</span><br><span class="line">    <span class="comment">/*至此,一趟快速排序结束,使用递归重复上述过程</span></span><br><span class="line"><span class="comment">      此处递归的写法有两种,使用的r下标实际上与l下标的值是相等的,使用那一个都可以.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,<span class="built_in">array</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">putchar</span>(<span class="string">'\n'</span>);</span><br><span class="line">    quicksort(<span class="built_in">array</span>,left,r<span class="number">-1</span>);</span><br><span class="line">    quicksort(<span class="built_in">array</span>,r+<span class="number">1</span>,right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>本次项目是一个Web项目，可以使用静态的HTML来生成，但是为了更贴近实际使用情况，我使用Java EE项目来演示（使用JSP技术），项目结构很简单，只有一个jsp文件和一个js文件夹，我们将jquery.min.js和jquery.qrcode.min.js两个文件放到项目的WebContent目录的js文件夹之下。  </p>
+<p>所说的两个js文件在网盘以下中给出：  </p>
+<blockquote>
+<p>百度网盘：链接：<a href="https://pan.baidu.com/s/1vQZRPbRKzaQg3-XqsRc-Jw" target="_blank" rel="noopener">https://pan.baidu.com/s/1vQZRPbRKzaQg3-XqsRc-Jw</a><br>提取码：y8cq </p>
+</blockquote>
+<h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><p>使用eclipse-javaee版本创建一个动态web项目，项目目录如图所示：<br><img src="http://t1.aixinxi.net/o_1csg1ce6k1hooe2g1tqs17j21av0a.jpg-j.jpg" alt="项目结构">  </p>
+<p>经过测试之后发现一个问题就是在jQuery-qrcode自带的编码是utf16，无法正常的解析中文，所以需要使用JavaScript函数对其 进行转码，所以在文件中使用了一个utf16to8()的函数对中文进行编码，之后生成的二维码就能正常使用了。</p>
+<p>给出jsp文件中的全部内容：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">"java"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span></span><br><span class="line">    pageEncoding=<span class="string">"UTF-8"</span>%&gt;</span><br><span class="line">&lt;!DOCTYPE html PUBLIC <span class="string">"-//W3C//DTD HTML 4.01 Transitional//EN"</span> <span class="string">"http://www.w3.org/TR/html4/loose.dtd"</span>&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span><br><span class="line">&lt;title&gt;jQuery生成二维码&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type="text/javascript" src="&lt;%=request.getContextPath()%&gt;/js/jquery.min.js"&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type="text/javascript" src="&lt;%=request.getContextPath()%&gt;/js/jquery.qrcode.min.js"&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"><span class="function">function <span class="title">utf16to8</span><span class="params">(str)</span> </span>&#123; </span><br><span class="line">    var out, i, len, c; </span><br><span class="line">    out = <span class="string">""</span>; </span><br><span class="line">    len = str.length; </span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; len; i++) &#123; </span><br><span class="line">    c = str.charCodeAt(i); </span><br><span class="line">    <span class="keyword">if</span> ((c &gt;= <span class="number">0x0001</span>) &amp;&amp; (c &lt;= <span class="number">0x007F</span>)) &#123; </span><br><span class="line">        out += str.charAt(i); </span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (c &gt; <span class="number">0x07FF</span>) &#123; </span><br><span class="line">        out += String.fromCharCode(<span class="number">0xE0</span> | ((c &gt;&gt; <span class="number">12</span>) &amp; <span class="number">0x0F</span>)); </span><br><span class="line">        out += String.fromCharCode(<span class="number">0x80</span> | ((c &gt;&gt;  <span class="number">6</span>) &amp; <span class="number">0x3F</span>)); </span><br><span class="line">        out += String.fromCharCode(<span class="number">0x80</span> | ((c &gt;&gt;  <span class="number">0</span>) &amp; <span class="number">0x3F</span>)); </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; </span><br><span class="line">        out += String.fromCharCode(<span class="number">0xC0</span> | ((c &gt;&gt;  <span class="number">6</span>) &amp; <span class="number">0x1F</span>)); </span><br><span class="line">        out += String.fromCharCode(<span class="number">0x80</span> | ((c &gt;&gt;  <span class="number">0</span>) &amp; <span class="number">0x3F</span>)); </span><br><span class="line">    &#125; </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> out; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div align=<span class="string">"center"</span>&gt;</span><br><span class="line">	生成的二维码如下&lt;br&gt;&lt;br&gt;</span><br><span class="line">	&lt;div id="qrcode"&gt;&lt;/div&gt;</span><br><span class="line">	&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"><span class="comment">//	jQuery('#qrcode').qrcode(utf16to8("但是人总得想办法,真的,要么忙着生存,要么赶着去死"));		</span></span><br><span class="line">	jQuery(<span class="string">'#qrcode'</span>).qrcode(&#123;width: <span class="number">200</span>,height: <span class="number">200</span>,text: utf16to8(<span class="string">"心怀希望是一件好事,也许是最好的事,心怀希望就永远有希望"</span>)&#125;);</span><br><span class="line">	&lt;/script&gt;	</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>生成的二维码如下：<br><img src="http://t1.aixinxi.net/o_1csg1vaq21d5m1c7t1r2721lr8va.jpg-j.jpg" alt=""></p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>网页的话一般没有解码的需求，所以老师也没有讲解jQuery解码的说明，所以网页项目只有生成二维码的过程。<br>二维码生成与解析的博文至此告一个段落，由于博主的基础水平所限，所以偏向实用的内容，如何生成和解析二维码是我这次学习的目标，至于二维码的原理等内容，可以去<a href="https://www.imooc.com/video/10309" target="_blank" rel="noopener">慕课网</a>Fcming老师的讲解，本文的所有代码是本人亲手所写并测试的，代码中难免有不足和错误的地方。还有本文偏向Java的技术栈，如果你希望使用PHP生成二维码可以去看看<a href="https://www.imooc.com/learn/862" target="_blank" rel="noopener">PHP QRCode生成二维码</a>这篇课程。<br>最后，再次感谢Fcming老师的讲解和慕课平台。</p>
 
       
     </div>
@@ -454,9 +436,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/排序算法/" rel="tag"><i class="fa fa-tag"></i> 排序算法</a>
+            <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
           
-            <a href="/tags/C语言/" rel="tag"><i class="fa fa-tag"></i> C语言</a>
+            <a href="/tags/Web应用/" rel="tag"><i class="fa fa-tag"></i> Web应用</a>
+          
+            <a href="/tags/JSP页面/" rel="tag"><i class="fa fa-tag"></i> JSP页面</a>
+          
+            <a href="/tags/二维码/" rel="tag"><i class="fa fa-tag"></i> 二维码</a>
+          
+            <a href="/tags/jQRuery/" rel="tag"><i class="fa fa-tag"></i> jQRuery</a>
           
         </div>
       
@@ -469,8 +457,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/允许自己虚度时光.html" rel="next" title="允许自己虚度时光">
-                <i class="fa fa-chevron-left"></i> 允许自己虚度时光
+              <a href="/二维码生成与解析：QRCode.html" rel="next" title="二维码生成与解析：QRCode">
+                <i class="fa fa-chevron-left"></i> 二维码生成与解析：QRCode
               </a>
             
           </div>
@@ -478,10 +466,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Git学习总结.html" rel="prev" title="Git学习总结">
-                Git学习总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -540,8 +524,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -623,39 +616,27 @@
           
           
 
-          <div id="days"></div>
-</script>
-<script language="javascript">
-function show_date_time() {
-  window.setTimeout("show_date_time()", 1000);
-  BirthDay = new Date("04/13/2018 00:00:00");
-  today = new Date();
-  timeold = (today.getTime() - BirthDay.getTime());
-  sectimeold = timeold / 1000
-  secondsold = Math.floor(sectimeold);
-  msPerDay = 24 * 60 * 60 * 1000
-  e_daysold = timeold / msPerDay
-  daysold = Math.floor(e_daysold);
-  e_hrsold = (e_daysold - daysold) * 24;
-  hrsold = setzero(Math.floor(e_hrsold));
-  e_minsold = (e_hrsold - hrsold) * 60;
-  minsold = setzero(Math.floor((e_hrsold - hrsold) * 60));
-  seconds = setzero(Math.floor((e_minsold - minsold) * 60));
-  document.getElementById('days').innerHTML = "已运行" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
-}
-function setzero(i) {
-  if (i < 10) {
-    i = "0" + i
-  };
-  return i;
-}
-show_date_time();
-</script>
-
+          
 
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建项目"><span class="nav-number">2.</span> <span class="nav-text">创建项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">3.</span> <span class="nav-text">小结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -675,14 +656,6 @@ show_date_time();
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">沼泽星空</span>
-
-  <span class="post-meta-divider">|</span>
-  <span class="post-meta-item-icon">
-    <i class="fa fa-area-chart"></i>
-  </span>
-  <div class="theme-info">
-    <span class="post-count">博客全站共: 17.4k 字</span>
-  </div>
 
   
 </div>

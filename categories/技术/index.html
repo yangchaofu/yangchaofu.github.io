@@ -102,7 +102,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -317,9 +317,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/二维码生成与解析（三）-jQuery-qrcode.html" itemprop="url">
+            <a class="post-title-link" href="/二维码生成与解析：jQuery-qrcode.html" itemprop="url">
               
-                <span itemprop="name">二维码生成与解析（三）-jQuery-qrcode</span>
+                <span itemprop="name">二维码生成与解析：jQuery-qrcode</span>
               
             </a>
         
@@ -345,9 +345,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/二维码生成与解析（二）-QRCode.html" itemprop="url">
+            <a class="post-title-link" href="/二维码生成与解析：QRCode.html" itemprop="url">
               
-                <span itemprop="name">二维码生成与解析（二）-QRCode</span>
+                <span itemprop="name">二维码生成与解析：QRCode</span>
               
             </a>
         
@@ -373,9 +373,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/二维码生成与解析（一）-zxing.html" itemprop="url">
+            <a class="post-title-link" href="/二维码生成与解析：zxing.html" itemprop="url">
               
-                <span itemprop="name">二维码生成与解析（一）-zxing</span>
+                <span itemprop="name">二维码生成与解析：zxing</span>
               
             </a>
         
@@ -401,9 +401,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/操作系统：（一）时间片轮转调度算法.html" itemprop="url">
+            <a class="post-title-link" href="/操作系统：时间片轮转调度算法.html" itemprop="url">
               
-                <span itemprop="name">操作系统：（一）时间片轮转调度算法</span>
+                <span itemprop="name">操作系统：时间片轮转调度算法</span>
               
             </a>
         
@@ -457,9 +457,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/算法与数据结构：（一）快速排序法.html" itemprop="url">
+            <a class="post-title-link" href="/算法与数据结构：快速排序法.html" itemprop="url">
               
-                <span itemprop="name">算法与数据结构：（一）快速排序法</span>
+                <span itemprop="name">算法与数据结构：快速排序法</span>
               
             </a>
         
@@ -485,9 +485,9 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/重学Java：（一）基本概念.html" itemprop="url">
+            <a class="post-title-link" href="/重学Java：基本概念.html" itemprop="url">
               
-                <span itemprop="name">重学Java：（一）基本概念</span>
+                <span itemprop="name">重学Java：基本概念</span>
               
             </a>
         
@@ -627,35 +627,7 @@
           
           
 
-          <div id="days"></div>
-</script>
-<script language="javascript">
-function show_date_time() {
-  window.setTimeout("show_date_time()", 1000);
-  BirthDay = new Date("04/13/2018 00:00:00");
-  today = new Date();
-  timeold = (today.getTime() - BirthDay.getTime());
-  sectimeold = timeold / 1000
-  secondsold = Math.floor(sectimeold);
-  msPerDay = 24 * 60 * 60 * 1000
-  e_daysold = timeold / msPerDay
-  daysold = Math.floor(e_daysold);
-  e_hrsold = (e_daysold - daysold) * 24;
-  hrsold = setzero(Math.floor(e_hrsold));
-  e_minsold = (e_hrsold - hrsold) * 60;
-  minsold = setzero(Math.floor((e_hrsold - hrsold) * 60));
-  seconds = setzero(Math.floor((e_minsold - minsold) * 60));
-  document.getElementById('days').innerHTML = "已运行" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
-}
-function setzero(i) {
-  if (i < 10) {
-    i = "0" + i
-  };
-  return i;
-}
-show_date_time();
-</script>
-
+          
 
         </div>
       </section>
@@ -679,14 +651,6 @@ show_date_time();
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">沼泽星空</span>
-
-  <span class="post-meta-divider">|</span>
-  <span class="post-meta-item-icon">
-    <i class="fa fa-area-chart"></i>
-  </span>
-  <div class="theme-info">
-    <span class="post-count">博客全站共: 17.4k 字</span>
-  </div>
 
   
 </div>

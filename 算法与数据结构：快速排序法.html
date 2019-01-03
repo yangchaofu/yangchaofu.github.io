@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Java,二维码 - zxing," />
+  <meta name="keywords" content="C语言,排序算法," />
 
 
 
@@ -83,20 +83,18 @@
 
 
 
-<meta name="description" content="本文介绍使用开源库zxing生成和解析二维码。">
-<meta name="keywords" content="Java,二维码 - zxing">
+<meta name="description" content="快速排序法是排序算法中综合性能最好的一种，Java语言和C++语言都自带了快速排序算法的库函数，足以见得其效率。">
+<meta name="keywords" content="C语言,排序算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二维码生成与解析（一）-zxing">
-<meta property="og:url" content="https://yangchaofu.cn/二维码生成与解析（一）-zxing.html">
+<meta property="og:title" content="算法与数据结构：快速排序法">
+<meta property="og:url" content="https://yangchaofu.cn/算法与数据结构：快速排序法.html">
 <meta property="og:site_name" content="GALAXY">
-<meta property="og:description" content="本文介绍使用开源库zxing生成和解析二维码。">
+<meta property="og:description" content="快速排序法是排序算法中综合性能最好的一种，Java语言和C++语言都自带了快速排序算法的库函数，足以见得其效率。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://imglf6.nosdn0.126.net/img/MVlXRlBpYVg1NWtaM29KamxXUFROd2dEdC9jQWxmOVJock5ST29IQ3pXWTRaZFhjb3d1bk9nPT0.png?imageView&thumbnail=500x0&quality=96&stripmeta=0">
-<meta property="og:updated_time" content="2018-11-24T14:39:11.393Z">
+<meta property="og:updated_time" content="2019-01-03T12:50:43.452Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二维码生成与解析（一）-zxing">
-<meta name="twitter:description" content="本文介绍使用开源库zxing生成和解析二维码。">
-<meta name="twitter:image" content="http://imglf6.nosdn0.126.net/img/MVlXRlBpYVg1NWtaM29KamxXUFROd2dEdC9jQWxmOVJock5ST29IQ3pXWTRaZFhjb3d1bk9nPT0.png?imageView&thumbnail=500x0&quality=96&stripmeta=0">
+<meta name="twitter:title" content="算法与数据结构：快速排序法">
+<meta name="twitter:description" content="快速排序法是排序算法中综合性能最好的一种，Java语言和C++语言都自带了快速排序算法的库函数，足以见得其效率。">
 
 
 
@@ -106,7 +104,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -126,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://yangchaofu.cn/二维码生成与解析（一）-zxing.html"/>
+  <link rel="canonical" href="https://yangchaofu.cn/算法与数据结构：快速排序法.html"/>
 
 
 
 
 
-  <title>二维码生成与解析（一）-zxing | GALAXY</title>
+  <title>算法与数据结构：快速排序法 | GALAXY</title>
   
 
 
@@ -316,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yangchaofu.cn/二维码生成与解析（一）-zxing.html">
+    <link itemprop="mainEntityOfPage" href="https://yangchaofu.cn/算法与数据结构：快速排序法.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="沼泽星空">
@@ -333,7 +331,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">二维码生成与解析（一）-zxing</h2>
+          <h2 class="post-title" itemprop="name headline">算法与数据结构：快速排序法</h2>
         
 
         <div class="post-meta">
@@ -345,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-16T22:40:58+08:00">
-                2018-11-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-20T22:53:25+08:00">
+                2018-06-20
               </time>
             
 
@@ -389,25 +387,6 @@
           
 
           
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,660
-                </span>
-              
-
-              
-
-              
-            </div>
-          
 
           
 
@@ -424,154 +403,19 @@
       
 
       
-        <blockquote>
-<p>本文介绍使用开源库<a href="https://github.com/zxing/zxing" target="_blank" rel="noopener">zxing</a>生成和解析二维码。  </p>
-</blockquote>
+        <p>快速排序法是排序算法中综合性能最好的一种，Java语言和C++语言都自带了快速排序算法的库函数，足以见得其效率。</p>
 <a id="more"></a>
-<blockquote>
-<p>使用zxing首先需要使用源码中的core和javase两个文件制作JAR文件，为了不偏离主题，将这部分放在最后一节讲解，本文直接提供制作好的JAR文件。<br>百度网盘：链接：<a href="https://pan.baidu.com/s/1vQZRPbRKzaQg3-XqsRc-Jw" target="_blank" rel="noopener">https://pan.baidu.com/s/1vQZRPbRKzaQg3-XqsRc-Jw</a><br>提取码：y8cq </p>
-</blockquote>
-<h3 id="一、使用zxing创建二维码"><a href="#一、使用zxing创建二维码" class="headerlink" title="一、使用zxing创建二维码"></a>一、使用zxing创建二维码</h3><p>将网盘中zxing文件夹中的zxing3.x.jar文件导入到项目中。<br>以下的代码将在 C://Users/yangc/Desktop文件夹中创建一张二维码（pic.png）,二维码所携带的内容为：<a href="https://yangchaofu.cn。创建过程总共分为两个大步骤，第一个大步骤是创建前的准备工作，包含两个小步骤；第二个大步骤是创建步骤" target="_blank" rel="noopener">https://yangchaofu.cn。创建过程总共分为两个大步骤，第一个大步骤是创建前的准备工作，包含两个小步骤；第二个大步骤是创建步骤</a> ，包含三个小步骤，整体可以用以下列表结构表示：  </p>
-<ul>
-<li>制作前准备工作<ul>
-<li>定义图片信息和二维码内容</li>
-<li>定义二维码的属性信息，包括纠错等级，编码格式，二维码边距</li>
-</ul>
-</li>
-<li>制作过程<ul>
-<li>使用MultiFormatRead的encode方法生成一个BitMatrix对象</li>
-<li>指定输出路径</li>
-<li>使用MatrixToImageWriter的writeToPath方法将BitMatrix对象写入文件</li>
-</ul>
-</li>
-</ul>
-<p>以下代码是对上述描述的实现：</p>
-<pre><code class="Java"><span class="keyword">import</span> java.io.File;
-<span class="keyword">import</span> java.nio.file.Path;
-<span class="keyword">import</span> java.util.HashMap;
-
-<span class="keyword">import</span> com.google.zxing.BarcodeFormat;
-<span class="keyword">import</span> com.google.zxing.EncodeHintType;
-<span class="keyword">import</span> com.google.zxing.MultiFormatWriter;
-<span class="keyword">import</span> com.google.zxing.client.j2se.MatrixToImageWriter;
-<span class="keyword">import</span> com.google.zxing.common.BitMatrix;
-<span class="keyword">import</span> com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-
-<span class="comment">/**</span>
-<span class="comment"> * Java进行二维码制作-zxing</span>
-<span class="comment"> * <span class="doctag">@author</span> yangchaofu</span>
-<span class="comment"> * <span class="doctag">@since</span> JDK 1.8.192</span>
-<span class="comment"> */</span>
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreateQRCode</span> </span>{
-
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{
-        <span class="comment">//制作二维码的准备工作</span>
-        <span class="comment">//1.定义所要生成的二维码图片的长,宽,图片格式和所携带的信息</span>
-        <span class="keyword">int</span> picWidth = <span class="number">300</span>;
-        <span class="keyword">int</span> picHeight = <span class="number">300</span>;
-        String picFormat = <span class="string">"png"</span>;
-        String picContents = <span class="string">"https://yangchaofu.cn"</span>;
-
-        <span class="comment">//2.定义二维码的基本属性配置,使用散列表存储,最基本的设置包括二维码的编码格式,纠错等级和图片的边距</span>
-        HashMap hints = <span class="keyword">new</span> HashMap();    
-        hints.put(EncodeHintType.CHARACTER_SET, <span class="string">"utf-8"</span>);    <span class="comment">//设置编码格式,utf-8可设置中文</span>
-        hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.M);   <span class="comment">//设置纠错等级</span>
-        hints.put(EncodeHintType.MARGIN, <span class="number">1</span>);   <span class="comment">//设置生成二维码边距</span>
-
-
-        <span class="comment">//生成二维码的步骤</span>
-        <span class="keyword">try</span> {                        
-            <span class="comment">//1.定义一个为BitMatrix 对象,使用MultiFormatWriter 对象的encode方法设置二维码的内容,编码格式BarcodeFormat,宽,高,设置信息hints</span>
-            BitMatrix bitMatrix = <span class="keyword">new</span> MultiFormatWriter().encode(picContents, BarcodeFormat.QR_CODE, picWidth, picHeight,hints);
-            <span class="comment">//2.定义一个Path对象用于确定文件的输出位置</span>
-            Path file = <span class="keyword">new</span> File(<span class="string">"C:/Users/yangc/Desktop/pic.png"</span>).toPath();
-            <span class="comment">//3.使用MatrixToImageWriter 对象的writeToPath方法,将二维码图片输出到指定的位置,设置格式为我们准备阶段的格式</span>
-            MatrixToImageWriter.writeToPath(bitMatrix, picFormat, file);    
-            System.out.println(<span class="string">"生成二维码成功!"</span>);
-        } <span class="keyword">catch</span> (Exception e) {
-            e.printStackTrace();
-        }        
-    }
-
-}
-</code></pre>
-<p>代码执行结果：  </p>
-<p><img src="http://imglf6.nosdn0.126.net/img/MVlXRlBpYVg1NWtaM29KamxXUFROd2dEdC9jQWxmOVJock5ST29IQ3pXWTRaZFhjb3d1bk9nPT0.png?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0" alt="点击前往查看">  </p>
-<h3 id="二、使用zxing解析二维码"><a href="#二、使用zxing解析二维码" class="headerlink" title="二、使用zxing解析二维码"></a>二、使用zxing解析二维码</h3><p>解析二维码包括三个大步骤，用以下结构描述</p>
-<ul>
-<li>解析前准备<ul>
-<li>准备一个文件对象，指向需要解析的二维码图片</li>
-<li>使用ImageIO读取该图片对象为缓冲区图片BufferedImage</li>
-<li>将BufferedImage转换为一个二进制位图对象</li>
-<li>定义一个散列表存取二维码的编码格式</li>
-</ul>
-</li>
-<li>解析过程步骤<ul>
-<li>定义一个MultiFormatReader 对象,用于解码</li>
-<li>定义一个Result 对象用来获取解析的结果,这里的参数使用到前面准备的两个重要的数据,被转换为BinaryBitmap的图片对象,和定义解码配置的散列表hints</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>解析结果的展示（可以直接toString得到解析结果，也可是使用getText获取解析文本，使用getBarcodeFromat获取二维码格式）</li>
-</ul>
-<p>以下是上述过程的代码表述：</p>
-<pre><code class="Java"><span class="keyword">import</span> java.awt.image.BufferedImage;
-<span class="keyword">import</span> java.io.File;
-<span class="keyword">import</span> java.util.HashMap;
-
-<span class="keyword">import</span> javax.imageio.ImageIO;
-
-<span class="keyword">import</span> com.google.zxing.BinaryBitmap;
-<span class="keyword">import</span> com.google.zxing.EncodeHintType;
-<span class="keyword">import</span> com.google.zxing.MultiFormatReader;
-<span class="keyword">import</span> com.google.zxing.Result;
-<span class="keyword">import</span> com.google.zxing.client.j2se.BufferedImageLuminanceSource;
-<span class="keyword">import</span> com.google.zxing.common.HybridBinarizer;
-
-<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DeQRCode</span> </span>{
-
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{
-        <span class="keyword">try</span> {
-            <span class="comment">//解析前准备步骤            </span>
-            <span class="comment">//1.定义一个File 对象,指向我们要解码的二维码位置</span>
-            File file = <span class="keyword">new</span> File(<span class="string">"C:/Users/yangc/Desktop/qr.png"</span>);
-            <span class="comment">//2.定义一个BufferedImage 对象,并使用ImageIO类的read方法读取我们的File对象(一张图片)</span>
-            BufferedImage image = ImageIO.read(file);
-            <span class="comment">//3.定义一个BinaryBitmap 对象,使用多重嵌套 实例化将我们的image转换成一个BinaryBitmap对象,多重嵌套声明包括HybridBinarizer-&gt;(参数)BufferedImageLuminanceSource-&gt;(参数)BufferedImage[image]</span>
-            BinaryBitmap binaryBitmap = <span class="keyword">new</span> BinaryBitmap(<span class="keyword">new</span> HybridBinarizer(<span class="keyword">new</span> BufferedImageLuminanceSource(image)));
-            <span class="comment">//4.定义一个散列表,指定编码的一对键值</span>
-            HashMap hints = <span class="keyword">new</span> HashMap();
-            hints.put(EncodeHintType.CHARACTER_SET, <span class="string">"utf-8"</span>); <span class="comment">// 设置编码格式,utf-8可设置中文</span>
-
-            <span class="comment">//解析过程步骤</span>
-            <span class="comment">//1.定义一个MultiFormatReader 对象,用于解码</span>
-            MultiFormatReader formatRead = <span class="keyword">new</span> MultiFormatReader();
-            <span class="comment">//2.定义一个Result 对象用来获取解析的结果,这里的参数使用到前面准备的两个重要的数据,被转换为BinaryBitmap的图片对象,和定义解码配置的散列表hints</span>
-            Result result = formatRead.decode(binaryBitmap, hints);
-
-            <span class="comment">//解析结果展示</span>
-            <span class="comment">//rusult的toString可以展示解析结果</span>
-            System.out.println(<span class="string">"解析结果:"</span>+result.toString());
-            <span class="comment">//result文本信息可以展示二维码所携带的文本内容</span>
-            System.out.println(<span class="string">"二维码文本内容:"</span>+result.getText());
-            <span class="comment">//解码的格式可以获取二维码的编码标准和格式</span>
-            System.out.println(<span class="string">"二维码格式:"</span>+result.getBarcodeFormat());        
-        } <span class="keyword">catch</span> (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-}
-</code></pre>
-<p>以上代码的解析结果：<br>解析结果：<a href="https://yangchaofu.cn">https://yangchaofu.cn</a><br>二维码文本内容：<a href="https://yangchaofu.cn">https://yangchaofu.cn</a><br>二维码格式：QR_CODE  </p>
-<h3 id="三、使用zxing源码制作JAR"><a href="#三、使用zxing源码制作JAR" class="headerlink" title="三、使用zxing源码制作JAR"></a>三、使用zxing源码制作JAR</h3><p>github上有很多非常优秀的开源项目，这次使用的zxing就是其中之一，如何复用这些代码呢，对于Java来说，jar文件是不陌生的。我在这次实践中第一次体会到了使用源码制作jar文件的过程，记录在此处。  </p>
-<ol>
-<li>新建一个Jave项目；</li>
-<li>将下载的zxing文件夹中的core和javase两个文件中下的com文件复制到项目的src中，复制中会有文件存在的提示，选择<strong>是</strong>就可以；</li>
-<li>由于项目不是完整的项目，项目中会有很多的错误提示，这个不用管，因为我们使用IDE的时候，IDE会帮助我们管理文件的，所以直接选择导出JAR文件，之后我们就可以得到一个最新的zxing的可复用构件。</li>
-</ol>
-<h3 id="四、小结"><a href="#四、小结" class="headerlink" title="四、小结"></a>四、小结</h3><p>以上代码实现了使用zxing创建和解析二维码，经测试所生成的二维码识别率和准确性都是满足要求的，解析代码的识别率也很高。zxing是一个很好的解决方案。<br>感谢<a href="https://www.imooc.com/video/10316/0" target="_blank" rel="noopener">慕课网</a>Fcming老师的讲解和慕课网这个平台，十分感谢！</p>
+<p>本次算法的实现思路来自于<a href="http://blog.51cto。com/ahalei/1365285" target="_blank" rel="noopener">博客</a>，网上的快速排序实现方式基本有两种形式，其中之一就是本文参考的这一种，还有一种是百度百科里面的哪一种，具体那种更优我觉得差异不大，其核心思路都是一样的。</p>
+<p>本文使用的快速排序算法的思路：<br>从待排序数组中找一个数作为标杆(对于这个数怎么选择众说纷纭,我为了让算法简单选得是每次待排序数组的第一个元素)，每一趟快速排序将比标杆大的数放在它的右边，比它小的数放在标杆的左边，实现一轮快速排序。<br>然后通过递归调用，将标杆左边的数组又作为一个参数,直到需要排序的数组只有一个数为止。</p>
+<p>实例：有待排序数组array，其长度为arr_len，其中的数据元素有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">13,22,58,3,1,2，1</span><br></pre></td></tr></table></figure>
+<p>共计有七个个元素，我们以第一个元素13为标杆，进行第一轮快速排序，得到如下结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 1 2 3 13 58 22</span><br></pre></td></tr></table></figure>
+<p>可以看到，我们将比13大的元素放在了该元素的右边，比13小的元素放在了该元素的左边，但是数组还不是有序的。但程序已经基本有序，我们以13为分割，对13左边和右边的数组再次实现上述过程。</p>
+<p>13左边已经有序：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1，1，2，3</span><br></pre></td></tr></table></figure></p>
+<p>13右边：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">待排序数组：58，22</span><br><span class="line">排序完成：22，58</span><br></pre></td></tr></table></figure></p>
+<p>由于我们传递的是数组的地址（指针方式）和需要排序的数组的下标，比如13右边的数组传递的就是数组<code>array，start：6，finish：7</code></p>
+<p>程序的大概思路如上所述，下面给出代码实现，本次采用C语言实现：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    本程序实现对一组整形数的快速排序实现</span></span><br><span class="line"><span class="comment">    2018年6月20日 16:38:43</span></span><br><span class="line"><span class="comment">    yangchaofu</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="comment">/*两种数组传递的函数原型*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[],<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span>;</span><br><span class="line"><span class="comment">// void quicksort(int *array,int array_length);</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">array</span>[]=&#123;<span class="number">13</span>,<span class="number">22</span>,<span class="number">58</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> arr_len = <span class="keyword">sizeof</span> <span class="built_in">array</span> / <span class="keyword">sizeof</span> <span class="built_in">array</span>[<span class="number">0</span>];</span><br><span class="line">    <span class="comment">/*输出数组*/</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Array's length: %d\n"</span>,arr_len);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr_len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,<span class="built_in">array</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">putchar</span>(<span class="string">'\n'</span>);</span><br><span class="line">    quicksort(<span class="built_in">array</span>,<span class="number">0</span>,arr_len<span class="number">-1</span>);</span><br><span class="line">    <span class="comment">/*排序后的输出结果*/</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr_len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,<span class="built_in">array</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">putchar</span>(<span class="string">'\n'</span>);</span><br><span class="line">    system(<span class="string">"pause"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">quicksort函数对给定的数组进行快速排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[],<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">/*递归结束条件,很重要的一个点*/</span></span><br><span class="line">    <span class="keyword">if</span>(left &gt;= right)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> l = left, r = right;</span><br><span class="line">    <span class="comment">/*每次排序一需要排序的数组的第一个数作为标杆,将比它大的数放在它的右边,比它小的数放在它的左边(倒序与之相反)*/</span></span><br><span class="line">    <span class="keyword">int</span> temp = <span class="built_in">array</span>[left];</span><br><span class="line">    <span class="keyword">while</span>(l != r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/*从右往左找一个比标杆temp小的数,l &lt; r 避免出现l比r大程序还在循环的异常,程序在l==r时需要跳出循环*/</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">array</span>[r] &gt;= temp &amp;&amp; l &lt; r)</span><br><span class="line">            r--;</span><br><span class="line">        <span class="comment">/*从左往右找一个比标杆temp大的数*/</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">array</span>[l] &lt;= temp &amp;&amp; l &lt; r)</span><br><span class="line">            l++;</span><br><span class="line">        <span class="comment">/*寻找完毕,执行至此,找个一个比标杆小的值array[r]和一个比标杆大的值array[l]*/</span></span><br><span class="line">        <span class="keyword">if</span>(l &lt; r)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">/*如果目前找到的比标杆小的值array[r]在比标杆大的值array[l]的右边,即:两数下标 l &lt; r ,则交换两个数*/</span></span><br><span class="line">            <span class="keyword">int</span> t;</span><br><span class="line">            t = <span class="built_in">array</span>[l];</span><br><span class="line">            <span class="built_in">array</span>[l] = <span class="built_in">array</span>[r];</span><br><span class="line">            <span class="built_in">array</span>[r] = t;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*上面的循环实现快速排序中的比标杆大的数和比标杆小的数的交换,快速排序的交换逻辑可以有多种实现方式</span></span><br><span class="line"><span class="comment">      除以上实现方式外,还有标杆在比较中,随着程序的执行进行位置的更换.</span></span><br><span class="line"><span class="comment">      本程序实现其中一种逻辑,到目前为止,标杆依旧在数组的最左边,需要将其和l=r这个位置的数进行交换.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="keyword">int</span> temporary =  <span class="built_in">array</span>[r];</span><br><span class="line">   <span class="built_in">array</span>[r] = temp;</span><br><span class="line">   <span class="built_in">array</span>[left] = temporary;</span><br><span class="line">    <span class="comment">/*至此,一趟快速排序结束,使用递归重复上述过程</span></span><br><span class="line"><span class="comment">      此处递归的写法有两种,使用的r下标实际上与l下标的值是相等的,使用那一个都可以.</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,<span class="built_in">array</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">putchar</span>(<span class="string">'\n'</span>);</span><br><span class="line">    quicksort(<span class="built_in">array</span>,left,r<span class="number">-1</span>);</span><br><span class="line">    quicksort(<span class="built_in">array</span>,r+<span class="number">1</span>,right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -589,9 +433,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+            <a href="/tags/C语言/" rel="tag"><i class="fa fa-tag"></i> C语言</a>
           
-            <a href="/tags/二维码-zxing/" rel="tag"><i class="fa fa-tag"></i> 二维码 - zxing</a>
+            <a href="/tags/排序算法/" rel="tag"><i class="fa fa-tag"></i> 排序算法</a>
           
         </div>
       
@@ -604,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/操作系统：（一）时间片轮转调度算法.html" rel="next" title="操作系统：（一）时间片轮转调度算法">
-                <i class="fa fa-chevron-left"></i> 操作系统：（一）时间片轮转调度算法
+              <a href="/允许自己虚度时光.html" rel="next" title="允许自己虚度时光">
+                <i class="fa fa-chevron-left"></i> 允许自己虚度时光
               </a>
             
           </div>
@@ -614,8 +458,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/二维码生成与解析（二）-QRCode.html" rel="prev" title="二维码生成与解析（二）-QRCode">
-                二维码生成与解析（二）-QRCode <i class="fa fa-chevron-right"></i>
+              <a href="/Git学习总结.html" rel="prev" title="Git学习总结">
+                Git学习总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -675,17 +519,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -767,55 +602,11 @@
           
           
 
-          <div id="days"></div>
-</script>
-<script language="javascript">
-function show_date_time() {
-  window.setTimeout("show_date_time()", 1000);
-  BirthDay = new Date("04/13/2018 00:00:00");
-  today = new Date();
-  timeold = (today.getTime() - BirthDay.getTime());
-  sectimeold = timeold / 1000
-  secondsold = Math.floor(sectimeold);
-  msPerDay = 24 * 60 * 60 * 1000
-  e_daysold = timeold / msPerDay
-  daysold = Math.floor(e_daysold);
-  e_hrsold = (e_daysold - daysold) * 24;
-  hrsold = setzero(Math.floor(e_hrsold));
-  e_minsold = (e_hrsold - hrsold) * 60;
-  minsold = setzero(Math.floor((e_hrsold - hrsold) * 60));
-  seconds = setzero(Math.floor((e_minsold - minsold) * 60));
-  document.getElementById('days').innerHTML = "已运行" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
-}
-function setzero(i) {
-  if (i < 10) {
-    i = "0" + i
-  };
-  return i;
-}
-show_date_time();
-</script>
-
+          
 
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、使用zxing创建二维码"><span class="nav-number">1.</span> <span class="nav-text">一、使用zxing创建二维码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、使用zxing解析二维码"><span class="nav-number">2.</span> <span class="nav-text">二、使用zxing解析二维码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、使用zxing源码制作JAR"><span class="nav-number">3.</span> <span class="nav-text">三、使用zxing源码制作JAR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、小结"><span class="nav-number">4.</span> <span class="nav-text">四、小结</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -835,14 +626,6 @@ show_date_time();
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">沼泽星空</span>
-
-  <span class="post-meta-divider">|</span>
-  <span class="post-meta-item-icon">
-    <i class="fa fa-area-chart"></i>
-  </span>
-  <div class="theme-info">
-    <span class="post-count">博客全站共: 17.4k 字</span>
-  </div>
 
   
 </div>
