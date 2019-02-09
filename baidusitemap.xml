@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://yangchaofu.cn/%E9%9F%B3%E4%B9%90%E5%92%8C%E8%A7%86%E9%A2%91%E6%B5%8B%E8%AF%95.html</loc>
-    <lastmod>2019-02-09T08:33:06.050Z</lastmod>
+    <lastmod>2019-02-09T08:44:29.665Z</lastmod>
     <data>
         <display>
         <title>音乐|视频</title>
@@ -33,9 +33,9 @@
         <title>二维码生成与解析：QRCode</title>
         <pubTime>2018-11-17T02:54:16.000Z</pubTime>
         
-        <tag>二维码</tag>
-         
         <tag>Java</tag>
+         
+        <tag>二维码</tag>
          
         <tag>QRCode</tag>
          
@@ -229,13 +229,13 @@
         <title>二维码生成与解析：jQuery-qrcode</title>
         <pubTime>2018-11-17T04:54:16.000Z</pubTime>
         
+        <tag>二维码</tag>
+         
         <tag>JavaScript</tag>
          
         <tag>Web应用</tag>
          
         <tag>JSP页面</tag>
-         
-        <tag>二维码</tag>
          
         <tag>jQRuery</tag>
          
