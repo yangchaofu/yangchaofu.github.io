@@ -8,10 +8,10 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>二维码</tag>
         <tag>JavaScript</tag>
         <tag>Web应用</tag>
         <tag>JSP页面</tag>
+        <tag>二维码</tag>
         <tag>jQRuery</tag>
       </tags>
   </entry>
@@ -23,8 +23,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>二维码</tag>
+        <tag>Java</tag>
         <tag>QRCode</tag>
       </tags>
   </entry>

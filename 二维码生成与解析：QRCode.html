@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Java,二维码,QRCode," />
+  <meta name="keywords" content="二维码,Java,QRCode," />
 
 
 
@@ -84,10 +84,10 @@
 
 
 <meta name="description" content="本文介绍使用QRCode生成和解析二维码">
-<meta name="keywords" content="Java,二维码,QRCode">
+<meta name="keywords" content="二维码,Java,QRCode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二维码生成与解析：QRCode">
-<meta property="og:url" content="https://yangchaofu.cn/二维码生成与解析：QRCode.html">
+<meta property="og:url" content="https://yangchaofu.github.io/二维码生成与解析：QRCode.html">
 <meta property="og:site_name" content="GALAXY">
 <meta property="og:description" content="本文介绍使用QRCode生成和解析二维码">
 <meta property="og:locale" content="zh-Hans">
@@ -126,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="https://yangchaofu.cn/二维码生成与解析：QRCode.html"/>
+  <link rel="canonical" href="https://yangchaofu.github.io/二维码生成与解析：QRCode.html"/>
 
 
 
@@ -316,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yangchaofu.cn/二维码生成与解析：QRCode.html">
+    <link itemprop="mainEntityOfPage" href="https://yangchaofu.github.io/二维码生成与解析：QRCode.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="沼泽星空">
@@ -427,8 +427,8 @@
 <p>创建结果：<br><img src="http://imglf6.nosdn0.126.net/img/MVlXRlBpYVg1NW1jZmIxN3cySGh4YkhXK2ZUUUVwS3FUWnJtRUpySkxGOGk5ancyQWRrdVF3PT0.png?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0" alt="点击前往查看"></p>
 <h3 id="QRCode解析二维码"><a href="#QRCode解析二维码" class="headerlink" title="QRCode解析二维码"></a>QRCode解析二维码</h3><p>QRCode解析二维码的效果并不如zxing，所以如果项目中使用，建议使用zxing。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.awt.image.BufferedImage;</span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.imageio.ImageIO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> jp.sourceforge.qrcode.QRCodeDecoder;</span><br><span class="line"><span class="keyword">import</span> jp.sourceforge.qrcode.data.QRCodeImage;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 使用QRCode进行二维码解析</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> yangc</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DeQRCode</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">		<span class="comment">//1.指定要解析的文件</span></span><br><span class="line">		File file = <span class="keyword">new</span> File(<span class="string">"C:/Users/yangc/Desktop/pic.png"</span>);</span><br><span class="line">		<span class="comment">//2.将文件使用ImageIO读取到BufferedImage中</span></span><br><span class="line">		BufferedImage bufferedImage = ImageIO.read(file);</span><br><span class="line">		<span class="comment">//3.定义一个QRCodeDecode 对象</span></span><br><span class="line">		QRCodeDecoder codeDecode = <span class="keyword">new</span> QRCodeDecoder();</span><br><span class="line"><span class="comment">//		//4.使用一个byte[]接受解析出来的内容</span></span><br><span class="line">		<span class="keyword">byte</span>[] contentsByte = codeDecode.decode(<span class="keyword">new</span> MyQRCodeImage(bufferedImage));</span><br><span class="line"><span class="comment">//		//5.对解析的内容进行String化并设置编码格式</span></span><br><span class="line">		String contentsStr = <span class="keyword">new</span> String(contentsByte,<span class="string">"UTF-8"</span>);</span><br><span class="line">		System.out.println(contentsStr);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//4-5步合在一起</span></span><br><span class="line"><span class="comment">//		String result  = new String(codeDecode.decode(new MyQRCodeImage(bufferedImage)),"UTF-8");</span></span><br><span class="line"><span class="comment">//		</span></span><br><span class="line"><span class="comment">//		System.out.println(result);	</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个MyQRCodeImage类实现QRCode接口,用于二维码解析</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> yangc</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyQRCodeImage</span> <span class="keyword">implements</span> <span class="title">QRCodeImage</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	BufferedImage bufferedImage;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">MyQRCodeImage</span><span class="params">(BufferedImage bufferedImage)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.bufferedImage = bufferedImage;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getHeight</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> bufferedImage.getHeight();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPixel</span><span class="params">(<span class="keyword">int</span> arg0, <span class="keyword">int</span> arg1)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> bufferedImage.getRGB(arg0, arg1);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getWidth</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> bufferedImage.getWidth();</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>解析结果：<br><a href="https://yangchaofu.cn">https://yangchaofu.cn</a></p>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>使用QRCode进行二维码的创建和解析说实话体验并不很好，有时候解析出来的一串内容，并没能将编码内容实际解析出来，所以建议使用<a href="https://yangchaofu.cn/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%94%9F%E6%88%90%E4%B8%8E%E8%A7%A3%E6%9E%90%EF%BC%88%E4%B8%80%EF%BC%89-zxing.html">zxing</a>。</p>
+<p>解析结果：<br><a href="https://yangchaofu.cn" target="_blank" rel="noopener">https://yangchaofu.cn</a></p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>使用QRCode进行二维码的创建和解析说实话体验并不很好，有时候解析出来的一串内容，并没能将编码内容实际解析出来，所以建议使用<a href="https://yangchaofu.cn/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%94%9F%E6%88%90%E4%B8%8E%E8%A7%A3%E6%9E%90%EF%BC%88%E4%B8%80%EF%BC%89-zxing.html" target="_blank" rel="noopener">zxing</a>。</p>
 
       
     </div>
@@ -446,9 +446,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
-          
             <a href="/tags/二维码/" rel="tag"><i class="fa fa-tag"></i> 二维码</a>
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
             <a href="/tags/QRCode/" rel="tag"><i class="fa fa-tag"></i> QRCode</a>
           
@@ -506,9 +506,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="uyan_frame"></div>
     </div>
-
   
 
 
@@ -815,14 +813,6 @@
 
 
 
-  
-    
-
-    
-      <!-- UY BEGIN -->
-      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2162261"></script>
-      <!-- UY END -->
-    
   
 
 

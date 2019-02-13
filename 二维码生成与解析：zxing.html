@@ -87,7 +87,7 @@
 <meta name="keywords" content="Java,二维码 - zxing">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二维码生成与解析：zxing">
-<meta property="og:url" content="https://yangchaofu.cn/二维码生成与解析：zxing.html">
+<meta property="og:url" content="https://yangchaofu.github.io/二维码生成与解析：zxing.html">
 <meta property="og:site_name" content="GALAXY">
 <meta property="og:description" content="本文介绍使用开源库zxing生成和解析二维码。">
 <meta property="og:locale" content="zh-Hans">
@@ -126,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="https://yangchaofu.cn/二维码生成与解析：zxing.html"/>
+  <link rel="canonical" href="https://yangchaofu.github.io/二维码生成与解析：zxing.html"/>
 
 
 
@@ -316,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yangchaofu.cn/二维码生成与解析：zxing.html">
+    <link itemprop="mainEntityOfPage" href="https://yangchaofu.github.io/二维码生成与解析：zxing.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="沼泽星空">
@@ -460,7 +460,7 @@
 </ul>
 <p>以下是上述过程的代码表述：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.awt.image.BufferedImage;</span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.imageio.ImageIO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.google.zxing.BinaryBitmap;</span><br><span class="line"><span class="keyword">import</span> com.google.zxing.EncodeHintType;</span><br><span class="line"><span class="keyword">import</span> com.google.zxing.MultiFormatReader;</span><br><span class="line"><span class="keyword">import</span> com.google.zxing.Result;</span><br><span class="line"><span class="keyword">import</span> com.google.zxing.client.j2se.BufferedImageLuminanceSource;</span><br><span class="line"><span class="keyword">import</span> com.google.zxing.common.HybridBinarizer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DeQRCode</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="comment">//解析前准备步骤			</span></span><br><span class="line">			<span class="comment">//1.定义一个File 对象,指向我们要解码的二维码位置</span></span><br><span class="line">			File file = <span class="keyword">new</span> File(<span class="string">"C:/Users/yangc/Desktop/qr.png"</span>);</span><br><span class="line">			<span class="comment">//2.定义一个BufferedImage 对象,并使用ImageIO类的read方法读取我们的File对象(一张图片)</span></span><br><span class="line">			BufferedImage image = ImageIO.read(file);</span><br><span class="line">			<span class="comment">//3.定义一个BinaryBitmap 对象,使用多重嵌套 实例化将我们的image转换成一个BinaryBitmap对象,多重嵌套声明包括HybridBinarizer-&gt;(参数)BufferedImageLuminanceSource-&gt;(参数)BufferedImage[image]</span></span><br><span class="line">			BinaryBitmap binaryBitmap = <span class="keyword">new</span> BinaryBitmap(<span class="keyword">new</span> HybridBinarizer(<span class="keyword">new</span> BufferedImageLuminanceSource(image)));</span><br><span class="line">			<span class="comment">//4.定义一个散列表,指定编码的一对键值</span></span><br><span class="line">			HashMap hints = <span class="keyword">new</span> HashMap();</span><br><span class="line">			hints.put(EncodeHintType.CHARACTER_SET, <span class="string">"utf-8"</span>); <span class="comment">// 设置编码格式,utf-8可设置中文</span></span><br><span class="line"></span><br><span class="line">			<span class="comment">//解析过程步骤</span></span><br><span class="line">			<span class="comment">//1.定义一个MultiFormatReader 对象,用于解码</span></span><br><span class="line">			MultiFormatReader formatRead = <span class="keyword">new</span> MultiFormatReader();</span><br><span class="line">			<span class="comment">//2.定义一个Result 对象用来获取解析的结果,这里的参数使用到前面准备的两个重要的数据,被转换为BinaryBitmap的图片对象,和定义解码配置的散列表hints</span></span><br><span class="line">			Result result = formatRead.decode(binaryBitmap, hints);</span><br><span class="line"></span><br><span class="line">			<span class="comment">//解析结果展示</span></span><br><span class="line">			<span class="comment">//rusult的toString可以展示解析结果</span></span><br><span class="line">			System.out.println(<span class="string">"解析结果:"</span>+result.toString());</span><br><span class="line">			<span class="comment">//result文本信息可以展示二维码所携带的文本内容</span></span><br><span class="line">			System.out.println(<span class="string">"二维码文本内容:"</span>+result.getText());</span><br><span class="line">			<span class="comment">//解码的格式可以获取二维码的编码标准和格式</span></span><br><span class="line">			System.out.println(<span class="string">"二维码格式:"</span>+result.getBarcodeFormat());		</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上代码的解析结果：<br>解析结果：<a href="https://yangchaofu.cn">https://yangchaofu.cn</a><br>二维码文本内容：<a href="https://yangchaofu.cn">https://yangchaofu.cn</a><br>二维码格式：QR_CODE  </p>
+<p>以上代码的解析结果：<br>解析结果：<a href="https://yangchaofu.cn" target="_blank" rel="noopener">https://yangchaofu.cn</a><br>二维码文本内容：<a href="https://yangchaofu.cn" target="_blank" rel="noopener">https://yangchaofu.cn</a><br>二维码格式：QR_CODE  </p>
 <h3 id="使用zxing源码制作JAR"><a href="#使用zxing源码制作JAR" class="headerlink" title="使用zxing源码制作JAR"></a>使用zxing源码制作JAR</h3><p>github上有很多非常优秀的开源项目，这次使用的zxing就是其中之一，如何复用这些代码呢，对于Java来说，jar文件是不陌生的。我在这次实践中第一次体会到了使用源码制作jar文件的过程，记录在此处。  </p>
 <ol>
 <li>新建一个Jave项目；</li>
@@ -543,9 +543,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="uyan_frame"></div>
     </div>
-
   
 
 
@@ -852,14 +850,6 @@
 
 
 
-  
-    
-
-    
-      <!-- UY BEGIN -->
-      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2162261"></script>
-      <!-- UY END -->
-    
   
 
 
