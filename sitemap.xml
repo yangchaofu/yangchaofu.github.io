@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yangchaofu.github.io/%E8%BF%99%E4%B9%9F%E6%98%AF%E7%94%9F%E6%B4%BB.html</loc>
+    
+    <lastmod>2019-02-13T12:15:49.211Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yangchaofu.github.io/about/index.html</loc>
+    
+    <lastmod>2019-02-13T08:43:49.024Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yangchaofu.github.io/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%94%9F%E6%88%90%E4%B8%8E%E8%A7%A3%E6%9E%90%EF%BC%9AQRCode.html</loc>
     
     <lastmod>2019-02-09T14:37:58.449Z</lastmod>
@@ -75,13 +89,6 @@
     <loc>https://yangchaofu.github.io/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%94%9F%E6%88%90%E4%B8%8E%E8%A7%A3%E6%9E%90%EF%BC%9AjQuery-qrcode.html</loc>
     
     <lastmod>2019-01-03T12:45:03.834Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yangchaofu.github.io/about/index.html</loc>
-    
-    <lastmod>2018-05-25T07:57:12.391Z</lastmod>
     
   </url>
   
