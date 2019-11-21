@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[静待花开]]></title>
-    <url>%2F%E9%9D%99%E5%BE%85%E8%8A%B1%E5%BC%80.html</url>
-    <content type="text"><![CDATA[Hello World 这是一篇记录心情的文章,把这些东西写出来感觉自己心里面好受一点.这次和自己对话的主题是,我现在到底处于一种什么境况,我能怎么面对或者如何熬过,我不喜欢反问自己,我总喜欢按照自己的想法来行事,事实证明这是有问题的,无论于己还是于人,都没法取得好的结果,我想我应该换一种思维方式和处世的方式,主动一点去接触社会,获取更多的资讯,通过自己对信息的敏感度,整合出来对自己有利的东西,然后充分把握机会,我总是把握不住机会,不知为何,从高考开始,到大学的四六级,到大四的校招找工作,到公务员考试,到现在的工作岗位,一切的一切,都在充分的说明我自闭的性格,对,我把自己关了起来,不想要被打扰,可世界太繁杂,来自内外的声音让我不得不寝食难安,让我不得安宁,我为此付出的精力,付出的时间,都是巨大的,我会从几个方面来求证这个观点. 首先,入党给我带来的一些不顺心的事情,本来评优入党,这并没有什么问题,但往往事不如人愿,就比如这次的党组织关系的转移,费尽周折,受尽白眼,感受到了来自党组织的各种不体谅,党员就是,无论如何,都应该把党放在第一位,这话理论上来说没有问题,但是终究没几个人能做到,却偏要要求别人能做到,对于其个人而言,做好这些事就是他们的全部,包括工作,包括党风的传承,但不知对于我来说,这仅仅只是我人生中的一部分,而且作为一个刚毕业之人,我还要负责养活自己的重任,承当赔付贷款的重任,实在经受不起如此折腾,但又退而不可,进而不得,实属艰难. 其二,工作的机会全部错失,大四不知为何,偏偏像染了瘟神一般,颈椎突然就不行了,这对本来还充满雄心壮志的我而言,是无法承受的,低落,失望的情绪蔓延,慢慢的迷失了自己,不再有任何学习的欲望和对未来的期望,完完全全的荒废了大学的最后一年,这也是为何现在如此艰难的原因之一,不知为何养成的高不成低不就的性格,错失众多机会,而后勉强夹缝中生存,活了下来,避免毕业之后沦落街头的惨状,也算是一小安慰,但实属杯水车薪,不足挂齿.现在在社会上感受到了社会对应届毕业生的刁难,不待见,特别是对像我们这样的二本毕业生来说.更是艰难无比,只能勉强苟活,唯一的正途似乎就是考公务员,考事业单位,进入体制,至于学的所谓专业知识,其实似乎都是狗屁,中国从来不是一个重视技术的国家,当官才能光宗耀祖,其他似乎都是狗屁,却也如此,可我到今日才明白这些至理,还曾妄想以技术改变世界和国家的面貌,实属不了解详情.]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[二维码生成与解析：jQuery-qrcode]]></title>
     <url>%2F%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%94%9F%E6%88%90%E4%B8%8E%E8%A7%A3%E6%9E%90%EF%BC%9AjQuery-qrcode.html</url>
     <content type="text"><![CDATA[前面两篇博文讲述了使用Java在本地生成和解析二维码，其生成的二维码可以用到Web应用中，但是在Web应用中有一种更简单的生成方法就是使用jQuery-qrcode来生成二维码，本片博文就介绍使用这种方法来生成二维码。 准备工作本次项目是一个Web项目，可以使用静态的HTML来生成，但是为了更贴近实际使用情况，我使用Java EE项目来演示（使用JSP技术），项目结构很简单，只有一个jsp文件和一个js文件夹，我们将jquery.min.js和jquery.qrcode.min.js两个文件放到项目的WebContent目录的js文件夹之下。 所说的两个js文件在网盘以下中给出： 百度网盘：链接：https://pan.baidu.com/s/1vQZRPbRKzaQg3-XqsRc-Jw提取码：y8cq 创建项目使用eclipse-javaee版本创建一个动态web项目，项目目录如图所示： 经过测试之后发现一个问题就是在jQuery-qrcode自带的编码是utf16，无法正常的解析中文，所以需要使用JavaScript函数对其 进行转码，所以在文件中使用了一个utf16to8()的函数对中文进行编码，之后生成的二维码就能正常使用了。 给出jsp文件中的全部内容： 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&lt;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%&gt;&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;&lt;html&gt;&lt;head&gt;&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;&lt;title&gt;jQuery生成二维码&lt;/title&gt;&lt;script type="text/javascript" src="&lt;%=request.getContextPath()%&gt;/js/jquery.min.js"&gt;&lt;/script&gt;&lt;script type="text/javascript" src="&lt;%=request.getContextPath()%&gt;/js/jquery.qrcode.min.js"&gt;&lt;/script&gt;&lt;script type="text/javascript"&gt;function utf16to8(str) &#123; var out, i, len, c; out = ""; len = str.length; for(i = 0; i &lt; len; i++) &#123; c = str.charCodeAt(i); if ((c &gt;= 0x0001) &amp;&amp; (c &lt;= 0x007F)) &#123; out += str.charAt(i); &#125; else if (c &gt; 0x07FF) &#123; out += String.fromCharCode(0xE0 | ((c &gt;&gt; 12) &amp; 0x0F)); out += String.fromCharCode(0x80 | ((c &gt;&gt; 6) &amp; 0x3F)); out += String.fromCharCode(0x80 | ((c &gt;&gt; 0) &amp; 0x3F)); &#125; else &#123; out += String.fromCharCode(0xC0 | ((c &gt;&gt; 6) &amp; 0x1F)); out += String.fromCharCode(0x80 | ((c &gt;&gt; 0) &amp; 0x3F)); &#125; &#125; return out; &#125;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;div align="center"&gt; 生成的二维码如下&lt;br&gt;&lt;br&gt; &lt;div id="qrcode"&gt;&lt;/div&gt; &lt;script type="text/javascript"&gt;// jQuery('#qrcode').qrcode(utf16to8("但是人总得想办法,真的,要么忙着生存,要么赶着去死")); jQuery('#qrcode').qrcode(&#123;width: 200,height: 200,text: utf16to8("心怀希望是一件好事,也许是最好的事,心怀希望就永远有希望")&#125;); &lt;/script&gt; &lt;/div&gt;&lt;/body&gt;&lt;/html&gt; 生成的二维码如下： 小结网页的话一般没有解码的需求，所以老师也没有讲解jQuery解码的说明，所以网页项目只有生成二维码的过程。二维码生成与解析的博文至此告一个段落，由于博主的基础水平所限，所以偏向实用的内容，如何生成和解析二维码是我这次学习的目标，至于二维码的原理等内容，可以去慕课网Fcming老师的讲解，本文的所有代码是本人亲手所写并测试的，代码中难免有不足和错误的地方。还有本文偏向Java的技术栈，如果你希望使用PHP生成二维码可以去看看PHP QRCode生成二维码这篇课程。最后，再次感谢Fcming老师的讲解和慕课平台。]]></content>
@@ -13,10 +8,10 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>二维码</tag>
         <tag>JavaScript</tag>
         <tag>Web应用</tag>
         <tag>JSP页面</tag>
-        <tag>二维码</tag>
         <tag>jQRuery</tag>
       </tags>
   </entry>
@@ -28,8 +23,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>二维码</tag>
         <tag>Java</tag>
+        <tag>二维码</tag>
         <tag>QRCode</tag>
       </tags>
   </entry>

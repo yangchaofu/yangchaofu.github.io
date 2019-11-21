@@ -4,21 +4,6 @@
 
     
   <url>
-    <loc>https://yangchaofu.github.io/%E9%9D%99%E5%BE%85%E8%8A%B1%E5%BC%80.html</loc>
-    <lastmod>2019-11-21T13:21:54.148Z</lastmod>
-    <data>
-        <display>
-        <title>静待花开</title>
-        <pubTime>2019-09-24T15:02:53.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://yangchaofu.github.io/Hexo%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2.html</loc>
     <lastmod>2019-05-25T23:59:54.013Z</lastmod>
     <data>
@@ -51,9 +36,9 @@
         <title>二维码生成与解析：QRCode</title>
         <pubTime>2018-11-17T02:54:16.000Z</pubTime>
         
-        <tag>二维码</tag>
-         
         <tag>Java</tag>
+         
+        <tag>二维码</tag>
          
         <tag>QRCode</tag>
          
@@ -159,13 +144,13 @@
         <title>二维码生成与解析：jQuery-qrcode</title>
         <pubTime>2018-11-17T04:54:16.000Z</pubTime>
         
+        <tag>二维码</tag>
+         
         <tag>JavaScript</tag>
          
         <tag>Web应用</tag>
          
         <tag>JSP页面</tag>
-         
-        <tag>二维码</tag>
          
         <tag>jQRuery</tag>
          
